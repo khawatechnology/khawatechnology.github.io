@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  jekyll:
+    image: registry.khawa.infra:5000/jekyll-ruby
+    volumes:
+      - .:/site
+    ports:
+      - '8080:4000'
