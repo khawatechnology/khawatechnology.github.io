@@ -15,15 +15,15 @@
 		font-size: 16pt;
 
 		@include breakpoint(xlarge) {
-			font-size: 12pt;
+			font-size: 14pt;
 		}
 
 		@include breakpoint(large) {
-			font-size: 11pt;
+			font-size: 13pt;
 		}
 
 		@include breakpoint(xxsmall) {
-			font-size: 10pt;
+			font-size: 12pt;
 		}
 	}
 
