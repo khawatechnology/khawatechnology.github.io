@@ -1,125 +1,118 @@
 ---
 layout: null
-title: Jekyll Theme - Home Page - Massively
-description: Every great website starts with a great homepage. The homepage tells your viewers what your site is all about and gives your viewers a place to come back to.
+title: Khawa Technology - Quality web development
+description: Khawa Technology met ses ingénieurs au service de votre projet web. Nous concevons, développons, optimisons, auditons votre site web, boutique e-commerce, intranet, plateforme Saas.
 sitemap:
-    priority: 1.0
-    lastmod: 2017-11-02
-    changefreq: weekly
+priority: 1.0
+lastmod: 2018-04-03
+changefreq: monthly
 ---
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-  Jekyll integration by somiibo.com
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
+<head>
     {% include head.html %}
+    <link rel="stylesheet" href="{{ "/assets/css/animate.min.css" | absolute_url }}" />
+</head>
+<body class="is-loading">
 
+<!-- Wrapper -->
+<div id="wrapper" class="fade-in">
 
-	</head>
-	<body class="is-loading">
+    <!-- Intro -->
+    <div id="intro">
+        <h1>{{site.title}}</h1>
+        <h2>{{site.tagline}}</h2>
+        <p>Top engineers dedicated to your web project<br/>
+        We <span id="js-rotate-service">build, integrate with</span> your <span id="js-rotate-product">API, Saas product, website, e-commerce store</span></p>
+        <ul class="actions">
+            <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
+        </ul>
+    </div>
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+    <!-- Header -->
+    <header id="header">
+        <a href="{{ "/" | absolute_url }}" class="logo">{{site.title}}</a>
+    </header>
 
-				<!-- Intro -->
-					<div id="intro">
-            <h1>{{site.title}}</h1>
-						<h2>The Jekyll Theme Version</h2>
-						<p>Massively is an HTML5 website theme designed by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a><br />
-						and released for free under the <a href="https://html5up.net/license">Creative Commons license</a>. Jekyll integration by <a href="https://somiibo.com">Somiibo</a></p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+    <!-- Nav -->
+    <nav id="nav">
 
-				<!-- Header -->
-					<header id="header">
-						<a href="{{ "/" | absolute_url }}" class="logo">{{site.title}}</a>
-					</header>
+        {% include nav.html %}
 
-				<!-- Nav -->
-					<nav id="nav">
+        <ul class="icons">
+            <li><a href="https://github.com/{{site.github}}" class="icon fa-github" rel="nofollow"><span class="label">GitHub</span></a></li>
+            <li><a href="https://bitbucket.org/{{site.bitbucket}}" class="icon fa-bitbucket" rel="nofollow"><span class="label">Bitbucket</span></a></li>
+        </ul>
+    </nav>
 
-            {% include nav.html %}
+    <!-- Main -->
+    <div id="main">
+        <section class="intro">
+            <p>Khawa Technology is a web development company based in Strasbourg, France, that specializes in open source solutions.<br/>
+                We are a small team composed of two INSA Lyon engineers cumulating together more than ten years experience in the web industry.<br/>
+                We are passionate and take great care to ship high quality deliverables only. We work remotely.</p>
 
-						<ul class="icons">
-              <li><a href="https://twitter.com/{{site.twitter}}" class="icon fa-twitter" rel="nofollow"><span class="label">Twitter</span></a></li>
-              <li><a href="https://facebook.com/{{site.facebook}}" class="icon fa-facebook" rel="nofollow"><span class="label">Facebook</span></a></li>
-              <li><a href="https://instagram.com/{{site.instagram}}" class="icon fa-instagram" rel="nofollow"><span class="label">Instagram</span></a></li>
-              <li><a href="https://github.com/{{site.github}}" class="icon fa-github" rel="nofollow"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main">
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<h2><a href="#">Massively is a versatile Jekyll theme</a></h2>
-									<p>With only a few edits, you can have a stunningly beautiful website <br />
-                    nearly out of the box. Of course... you can always take it further <br />
-                    and make it something even more amazing!</p>
-								</header>
-								<a href="#" class="image main"><img src="{{ "/images/pic01.jpg" | absolute_url }}" alt="" /></a>
-                <p>Regardless of your website's function, the homepage is what brings the user in.
-                  If it's anything short of intriguing, captivating, or just plain cool, you're out of luck and you might deter some visitors.</p>
-                <p>Your homepage must clearly describe what your site is about.
-									Having engaging content will in this manner enable you to offer and it will make your customers more inclined to purchase from you. Content is a way to position your organization in the correct place for your clients to discover you.
-								</p>
-								<p>
-									In this manner, content in itself is a standout amongst the best promoting apparatuses in your whole advertising toolbox! Rather than making your content around your promoting technique, it's limitlessly more productive to fabricate your showcasing around your content.
-								 </p>
-
-							</article>
-
-						<!-- Posts -->
-							<section class="posts">
-                {% for post in site.posts limit:3 %}
-                {% assign mod3 = forloop.index | modulo: 3 %}
-  								<article>
-  									<header>
-  										<span class="date">{{ post.date | date_to_string }}</span>
-  										<h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</h2>
-  									</header>
-  									<a href="{{ post.url | absolute_url }}" class="image fit"><img src="{{ post.image | absolute_url }}" alt="" /></a>
-  									<p>{{ post.excerpt }}</p>
-  									<ul class="actions">
-  										<li><a href="{{ post.url | absolute_url }}" class="button">Full Story</a></li>
-  									</ul>
-  								</article>
-                  {% if mod3 == 0 %}
-                  <article>
-  									<header>
-  										<h2><a href="#">Sponsored</h2>
-  									</header>
-
-  								</article>
-                  {% endif %}
-                {% endfor %}
-
-							</section>
-
-						<!-- Footer -->
-							<footer>
+        </section>
+        <!-- Posts -->
+        <section class="posts">
+            {% for post in site.posts limit:3 %}
+            {% assign mod3 = forloop.index | modulo: 3 %}
+            <article>
+                <header>
+                    <span class="date">{{ post.date | date_to_string }}</span>
+                    <h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</h2>
+                </header>
+                <a href="{{ post.url | absolute_url }}" class="image fit"><img src="{{ post.image | absolute_url }}" alt="" /></a>
+                <p>{{ post.excerpt }}</p>
                 <ul class="actions">
-                  <li><a href="{{ "/blog/" | absolute_url }}" class="button">Our Blog</a></li>
+                    <li><a href="{{ post.url | absolute_url }}" class="button">Full Story</a></li>
                 </ul>
-							</footer>
+            </article>
+            {% if mod3 == 0 %}
+            <article>
+                <header>
+                    <h2><a href="#">Sponsored</h2>
+                </header>
 
-					</div>
+            </article>
+            {% endif %}
+            {% endfor %}
 
-				<!-- Footer -->
-        {% include foot.html %}
+        </section>
 
-			</div>
+        <!-- Footer -->
+        <footer>
+            <ul class="actions">
+                <li><a href="{{ "/blog/" | absolute_url }}" class="button">Our Blog</a></li>
+            </ul>
+        </footer>
 
-		<!-- Scripts -->
-		{% include scripts-main.html %}
-    {% include tracking.html %}
+    </div>
 
-	</body>
+    <!-- Footer -->
+    {% include foot.html %}
+
+</div>
+
+<!-- Scripts -->
+{% include scripts-main.html %}
+<script src="{{ "/assets/js/morphext.min.js" | absolute_url }}"></script>
+<script>
+$(document).ready(function() {
+    // Rotate text in Lead
+    $("#js-rotate-service").Morphext({
+        animation: "fadeInUp",
+        separator: ",",
+        speed: 3000
+    });
+
+    $("#js-rotate-product").Morphext({
+        animation: "fadeInDown",
+        separator: ",",
+        speed: 3000
+    });
+});
+</script>
+
+</body>
 </html>

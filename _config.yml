@@ -1,5 +1,6 @@
 # Site
 title:        Khawa Technology
+tagline:      Quality Web Development
 bio:          'This is the bio'
 description:  "DESCRIPTION"
 locale:       en_US
@@ -35,11 +36,13 @@ disqus_shortname:   default
 
 # Social
 github:             khawatechnology
+bitbucket:          khawa
+
 
 # personal
-location:           Los Angeles, CA
-phone:              310-318-5555
-email:              info@default.com
+location:           Strasbourg, FRANCE
+phone:              (+33)649676241
+email:              contact@khawa.tech
 
 # Gems
 plugins:
@@ -56,4 +59,8 @@ jekyll-mentions:
     base_url: https://github.com
 
 # Exclude list
-exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile, old, docker-compose]
+exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile, old, docker-compose, .idea/]
+
+t:
+  en:
+  fr:
