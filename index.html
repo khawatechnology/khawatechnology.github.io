@@ -47,19 +47,71 @@ changefreq: monthly
 
     <!-- Main -->
     <div id="main">
-        <section class="intro">
+        <!-- Presentation -->
+        <section id="presentation">
             <div class="row">
                 <div class="6u">
-                    <p>Khawa Technology is a web development company based in Strasbourg, France, that specializes in open source solutions.<p/>
-                    <p>We are a small team composed of two INSA Lyon engineers cumulating more than ten years experience in the web industry.<p/>
-                    <p>We are passionate and take great care to ship high quality deliverables. We prefer to remotely.</p>
+                    <p>Khawa Technology is a web development company based in Strasbourg, France that specializes in backend development with open source solutions.<p/>
+                    <p>We are a two INSA Lyon engineers with more than ten years cumulated experience in the web industry.<p/>
+                    <p>We are passionate and take great care to ship high quality deliverables only. We like to work with companies who care about their web project.</p>
+                    <p>We are available part time for remote work. We can integrate with your existing team or take the technical lead and work in autonomy.</p>
                 </div>
-                <div class="6u$">
-                   <img src="images/Khawa_logo.png" alt="Khawa Technology logo" />
+                <div class="6u$ align-center">
+                    <div class="image">
+                        <img src="/images/Khawa_logo.png" alt="Khawa Technology logo" />
+                    </div>
                 </div>
             </div>
-
         </section>
+
+        <!-- Team -->
+        <section id="team">
+           <header class="major">
+               <h2>Meet the team</h2>
+               <p>Write something friendly here.</p>
+           </header>
+            <div class="row">
+                <div class="6u align-center">
+                    <div class="image">
+                        <img class="img-circle" src="/images/profile-fk.jpg" alt="François Koessler" />
+                    </div>
+                </div>
+                <div class="6u$ align-center">
+                    <div class="image">
+                        <img class="img-circle" src="/images/profile-ah.jpg" alt="Antoine Henry" />
+                    </div>
+                </div>
+                <div class="6u align-center">
+                    <strong>François Koessler</strong>
+                    <div>General manager - Engineer</div>
+                    <div>Strasbourg, France</div>
+                </div>
+                <div class="6u$ align-center">
+                    <strong>Antoine Henry</strong>
+                    <div>CTO - Engineer</div>
+                    <div>La Rochelle, France</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services">
+            <header class="major">
+                <h2>Services</h2>
+                <p>
+                    We offer our expertise in backend development.
+                </p>
+            </header>
+                    <dl>
+                        <dt>White label development</dt>
+                        <dd><p>We integrate your team or work in autonomy on your web project.</p></dd>
+                        <dt>Consulting</dt>
+                        <dd><p>Our expertise at your hands to find efficient, pragmatic and sustainable solutions.</p></dd>
+                        <dt>Audit</dt>
+                        <dd><p>Performance, code quality, accessibility, SEO, security.</p></dd>
+                    </dl>
+        </section>
+
         <!-- Posts -->
         <section class="posts">
             {% for post in site.posts limit:3 %}
