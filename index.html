@@ -64,7 +64,7 @@ changefreq: monthly
         </section>
 
         <!-- Team -->
-        <section id="team">
+        <section id="team" class="dark">
            <header class="major">
                <h2>Meet the team</h2>
                <p>We are a two INSA Lyon engineers with more than ten years cumulated experience in the web industry.</p>
@@ -117,7 +117,7 @@ changefreq: monthly
                         <h2>Services</h2>
                         <p>We offer our expertise in backend development.</p>
                     </header>
-                    <dl>
+                    <dt>
                         <dt><h4>White label development</h4></dt>
                         <dd>
                             <p>You are looking for sharp technical skills or one-off support on a web project. We integrate with your existing development team or work autonomously on your project.</p>
@@ -130,7 +130,7 @@ changefreq: monthly
                         </dd>
                         <dt><h4>Consulting</h4></dt>
                         <dd><p>Our expertise at your service to find efficient, pragmatic and sustainable solutions.</p></dd>
-                        <dt>Audit</dt>
+                        <dt><h4>Audit</h4></dt>
                         <dd><p>Performance, code quality, accessibility, SEO, security.</p></dd>
                     </dl>
                 </div>
@@ -163,7 +163,7 @@ changefreq: monthly
         </section>
 
         <!-- Values -->
-        <section id="values">
+        <section id="values" class="dark">
             <div class="row">
                 <div class="6u 12u$(medium)">
                     <header class="major">
@@ -205,8 +205,25 @@ changefreq: monthly
             </div>
         </section>
 
+        <!-- Story -->
+        <section id="story">
+            <header class="major">
+                <h2>The founders' story</h2>
+            </header>
+            <p>
+                <span class="image right">
+                    <img src="/images/KhawaKharpo.JPG" alt="Khawa Karpo moutain" />
+                </span>
+                Antoine and François are two long time friends who lived in Asia for a while after graduating in France. Primarily based in Beijing, they have been working in the web industry for more than eight years.
+                <br/><br/>
+                Working in a multicultural environment in startups, web agencies or as independant contractors, they have gained a lot of experience in technical leadership and in shipping web projects of any size.
+                <br/><br/>
+                Khawa Karpo is the name of the mountain where Antoine and François decided to join their efforts and found Khawa Technology.
+            </p>
+        </section>
+
         <!-- Posts -->
-        <section class="posts">
+        <section class="posts dark">
             {% for post in site.posts limit:3 %}
             {% assign mod3 = forloop.index | modulo: 3 %}
             <article>
