@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Develop a Shopify application with Ruby on Rails"
-date:   2018-04-05 10:55:40 +0200
+date:   2017-03-21 10:55:40 +0200
 categories: Technical
 tags: [ruby-on-rails, shopify]
 excerpt: In this article, we'll see through a simple example how to develop a Shopify application using Ruby on Rails.
