@@ -11,7 +11,6 @@ changefreq: monthly
 <html>
 <head>
     {% include head.html %}
-    <link rel="stylesheet" href="{{ "/assets/css/animate.min.css" | absolute_url }}" />
 </head>
 <body class="is-loading">
 
@@ -50,15 +49,15 @@ changefreq: monthly
         <!-- Presentation -->
         <section id="presentation">
             <div class="row">
-                <div class="6u 12u$(small)">
-                    <p>Khawa Technology is a web development company based in Strasbourg, France that specializes in backend development with open source solutions.<p/>
-                    <p>We are available part time for remote work. We can integrate with your existing team or take the technical lead of your web project.</p>
-                    <p>We are passionate and take great care to ship high quality deliverables only. We enjoy working with companies who care about their web project.</p>
-                </div>
-                <div class="6u$ 12u$(small) align-center">
+                <div class="6u 12u$(small) align-center">
                     <div class="image">
                         <img src="/images/Khawa_logo.png" alt="Khawa Technology logo" />
                     </div>
+                </div>
+                <div class="6u$ 12u$(small)">
+                    <p>Khawa Technology is a web development company based in Strasbourg, France that specializes in backend development with open source solutions.<p/>
+                    <p>We are available part time for remote work. We can integrate with your existing team or take the technical lead of your web project.</p>
+                    <p>We are passionate and take great care to ship high quality deliverables only. We enjoy working with companies who care about their web project.</p>
                 </div>
             </div>
         </section>
@@ -150,6 +149,7 @@ changefreq: monthly
                         <li>Rails</li>
                         <li>Solidus (e-commerce)</li>
                         <li>Shopify (e-commerce)</li>
+                        <li>Drupal</li>
                     </ul>
                     <h4>Devops</h4>
                     <ul>
@@ -165,24 +165,7 @@ changefreq: monthly
         <!-- Values -->
         <section id="values" class="dark">
             <div class="row">
-                <div class="6u 12u$(medium)">
-                    <header class="major">
-                        <h2>Values</h2>
-                    </header>
-                    <dl>
-                        <dt><h4>Quality deliverables</h4></dt>
-                        <dd>
-                            <p>We set up a strict workflow to ensure we deliver high quality deliverables: continuous training, enforcement of industry best practices, clean and commented code, automated tests, code reviews. We build robust and resilient solutions in order to maximize the return on investment for our clients.</p>
-                        </dd>
-                        <dt><h4>Technological watch</h4></dt>
-                        <dd>
-                            <p>We regularly try out the latest technologies to provide our clients with the best advices regarding technologies and innovative solutions.</p>
-                        </dd>
-                        <dt><h4>Open source</h4></dt>
-                        <dd><p>We use existing software components and only develop features specific to your project, thus minimizing development costs. We try to give back to the open source community as much as we can.</p></dd>
-                    </dl>
-                </div>
-                <div class="5u$ -1u 12u$(medium)">
+                <div class="5u 12u$(medium)">
                     <header class="major">
                         <h2>Why choose Khawa?</h2>
                     </header>
@@ -201,6 +184,23 @@ changefreq: monthly
                         <li>We are available by chat, emaiul or phone</li>
                         <li>Monthly reports that describe what has been done</li>
                     </ul>
+                </div>
+                <div class="6u$ -1u 12u$(medium)">
+                    <header class="major">
+                        <h2>Values</h2>
+                    </header>
+                    <dl>
+                        <dt><h4>Quality deliverables</h4></dt>
+                        <dd>
+                            <p>We set up a strict workflow to ensure we deliver high quality deliverables: continuous training, enforcement of industry best practices, clean and commented code, automated tests, code reviews. We build robust and resilient solutions in order to maximize the return on investment for our clients.</p>
+                        </dd>
+                        <dt><h4>Technological watch</h4></dt>
+                        <dd>
+                            <p>We regularly try out the latest technologies to provide our clients with the best advices regarding technologies and innovative solutions.</p>
+                        </dd>
+                        <dt><h4>Open source</h4></dt>
+                        <dd><p>We use existing software components and only develop features specific to your project, thus minimizing development costs. We try to give back to the open source community as much as we can.</p></dd>
+                    </dl>
                 </div>
             </div>
         </section>
@@ -242,11 +242,9 @@ changefreq: monthly
                 <header>
                     <h2><a href="#">Sponsored</h2>
                 </header>
-
             </article>
             {% endif %}
             {% endfor %}
-
         </section>
 
         <!-- Footer -->
@@ -255,12 +253,10 @@ changefreq: monthly
                 <li><a href="{{ "/blog/" | absolute_url }}" class="button">Our Blog</a></li>
             </ul>
         </footer>
-
     </div>
 
     <!-- Footer -->
     {% include foot.html %}
-
 </div>
 
 <!-- Scripts -->
@@ -282,6 +278,5 @@ $(document).ready(function() {
     });
 });
 </script>
-
 </body>
 </html>
