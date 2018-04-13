@@ -1,279 +1,502 @@
 ---
-layout: null
-title: Khawa Technology - Quality web development
-description: Khawa Technology engineers at your service. We conceive, develop, optimize, audit your website, e-commerce store or Saas product.
-sitemap:
-priority: 1.0
-lastmod: 2018-04-03
-changefreq: monthly
+layout: full_width
 ---
-<!DOCTYPE HTML>
-<html>
-<head>
-    {% include head.html %}
-</head>
-<body class="is-loading">
 
-<!-- Wrapper -->
-<div id="wrapper" class="fade-in">
-
-    <!-- Intro -->
-    <div id="intro">
-        <h1>{{site.title}}</h1>
-        <h2>{{site.tagline}}</h2>
-        <p>Top engineers dedicated to your web project<br/>
-        We <span id="js-rotate-service">develop, integrate with, audit</span> your <span id="js-rotate-product">API, Saas product, website, e-commerce store</span></p>
-        <ul class="actions">
-            <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
-        </ul>
+<!-- SECTION CTA -->
+<!--===============================================================-->
+<div class="section section-xs section-both section-primary section-call-to">
+    <div class="container">
+        <div class="row text-center-xs">
+            <div class="col-sm-9">
+                <h3 class="title-md">Vous souhaitez travailler avec nous ?</h3>
+            </div>
+            <div class="col-sm-3 text-right text-center-xs">
+                <a class="btn btn-primary btn-rounded btn-lg"></i>Contactez-nous</a>
+            </div>
+        </div>
     </div>
+</div>
 
-    <!-- Header -->
-    <header id="header">
-        <a href="{{ "/" | absolute_url }}" class="logo">{{site.title}}</a>
-    </header>
-
-    <!-- Nav -->
-    <nav id="nav">
-
-        {% include nav.html %}
-
-        <ul class="icons">
-            <li><a href="https://github.com/{{site.github}}" class="icon fa-github" rel="nofollow"><span class="label">GitHub</span></a></li>
-            <li><a href="https://bitbucket.org/{{site.bitbucket}}" class="icon fa-bitbucket" rel="nofollow"><span class="label">Bitbucket</span></a></li>
-        </ul>
-    </nav>
-
-    <!-- Main -->
-    <div id="main">
-        <!-- Presentation -->
-        <section id="presentation">
-            <div class="row">
-                <div class="6u 12u$(small) align-center">
-                    <div class="image">
-                        <img src="/images/Khawa_logo.png" alt="Khawa Technology logo" />
-                    </div>
-                </div>
-                <div class="6u$ 12u$(small)">
-                    <p>Khawa Technology is a web development company based in Strasbourg, France that specializes in backend development with open source solutions.<p/>
-                    <p>We are available part time for remote work. We can integrate with your existing team or take the technical lead of your web project.</p>
-                    <p>We are passionate and take great care to ship high quality deliverables only. We enjoy working with companies who care about their web project.</p>
+<!-- SECTION INTRO -->
+<!--===============================================================-->
+<section id="section-intro" class="section section-light section-both section-sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="img-responsive center-block">
+                    <img src="{{ 'images/logo/Khawa_logo_master_colorful_cropped_300x400.png' | absolute_url }}" alt="Khawa Technology"
+                         typeof="foaf:Image" class="img-responsive" />
                 </div>
             </div>
-        </section>
-
-        <!-- Team -->
-        <section id="team" class="dark">
-           <header class="major">
-               <h2>Meet the team</h2>
-               <p>We are a two INSA Lyon engineers with more than ten years cumulated experience in the web industry.</p>
-           </header>
-            <div class="row">
-                <div class="6u 12u$(small) align-center">
-                    <div class="row">
-                        <div class="12u$">
-                            <div class="image">
-                                <img class="img-circle" src="/images/profile-fk.jpg" alt="François Koessler" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="12u$">
-                            <p class="align-center">
-                                <strong>François Koessler</strong><br/>
-                                General manager - Engineer<br/>
-                                Strasbourg, France
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="6u$ 12u$(small) align-center">
-                    <div class="row">
-                        <div class="12u$">
-                            <div class="image">
-                                <img class="img-circle" src="/images/profile-ah.jpg" alt="Antoine Henry" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="12u$">
-                            <p class="align-center">
-                                <strong>Antoine Henry</strong><br/>
-                                CTO - Engineer<br/>
-                                La Rochelle, France
-                            </p>
-                        </div>
-                    </div>
+            <div class="col-sm-6 col-sm-offset-1 text-justify">
+                <div class="lead-section lead">
+                    <p>Khawa Technology est une société de développement web basée à Strasbourg et spécialisée dans les technologies open source.</p>
+                    <p>Nous sommes une petite équipe composée de deux ingénieurs diplômés de l'INSA Lyon cumulant plus de dix années d'expérience dans l'industrie du web.</p>
+                    <p>Nous sommes des passionnés et portons une attention particulière à la qualité de nos livrables. Nous proposons nos services en télétravail.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
-        <!-- Services -->
-        <section id="services">
-            <div class="row">
-                <div class="6u 12u$(medium)">
-                    <header class="major">
-                        <h2>Services</h2>
-                        <p>We offer our expertise in backend development.</p>
-                    </header>
-                    <dt>
-                        <dt><h4>White label development</h4></dt>
-                        <dd>
-                            <p>You are looking for sharp technical skills or one-off support on a web project. We integrate with your existing development team or work autonomously on your project.</p>
-                            <p>You provide the design, wireframes and handle project management, Khawa Technology takes care of everything development related: analysis, architecture, planning, development and deployment.</p>
-                        </dd>
-                        <dt><h4>Maintenance</h4></dt>
-                        <dd>
-                            <p>You have issues to fix or minor evolutions to bring on a project and don't have the resources to handle that work, we process your maintenance operations whatever the complexity of the project.</p>
-                            <p>Khawa Technology offers a la carte monthly maintenance plans.</p>
-                        </dd>
-                        <dt><h4>Consulting</h4></dt>
-                        <dd><p>Our expertise at your service to find efficient, pragmatic and sustainable solutions.</p></dd>
-                        <dt><h4>Audit</h4></dt>
-                        <dd><p>Performance, code quality, accessibility, SEO, security.</p></dd>
-                    </dl>
+<!-- SECTION SERVICES -->
+<!--===============================================================-->
+<section class="clearfix section section-both section-dark section-sm" id="section-services">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3 text-center">
+                <h2 class="title-xl title-section text-uppercase hr primary-color">Nos services</h2>
+            </div>
+        </div>
+        <div class="mb row">
+            <div class="col-md-5 col-sm-offset-1">
+                <div class="icon-sm-side right service">
+                    <i class="fa fa-round fa-3x fa-desktop"></i>
+                    <h3 class="title"><span>Création et refonte de site</span> </h3>
+                    <p class="subtitle">Vous voulez un site internet performant qui génère des prospects.</p>
                 </div>
-                <div class="5u$ -1u 12u$(medium)">
-                    <header class="major">
-                        <h2>Technologies</h2>
-                        <p>We are experts with the following techs.</p>
-                    </header>
-                    <h4>Languages</h4>
-                    <ul>
+            </div>
+            <div class="col-md-5">
+                <div class="icon-sm-side left service">
+                    <i class="fa fa-round fa-3x fa-shopping-cart"></i>
+                    <h3 class="title"><span>Création et refonte de boutique en ligne</span></h3>
+                    <p>Vous voulez une boutique en ligne performante qui génère des ventes.</p>
+                </div>
+            </div>
+        </div>
+        <div class="mb row">
+            <div class="col-md-5 col-sm-offset-1">
+                <div class="icon-sm-side right service">
+                    <i class="fa fa-round fa-3x fa-cloud-download"></i>
+                    <h3 class="title"><span>Conception d&#039;applications web et plateformes SaaS</span></h3>
+                    <p>Vous avez une idée de service en ligne et cherchez un partenaire pour lui donner vie.</p>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="icon-sm-side left service">
+                    <i class="fa fa-round fa-3x fa-rocket"></i>
+                    <h3 class="title"><span>Amélioration continue</span></h3>
+                    <p>Nous optimisons votre site ou application par itérations pour obtenir de meilleurs résultats.</p>
+                </div>
+            </div>
+        </div>
+        <div class="mb row">
+            <div class="col-md-5 col-sm-offset-1">
+                <div class="icon-sm-side right service">
+                    <i class="fa fa-round fa-3x fa-lightbulb-o"></i>
+                    <h3 class="title"><span>Conseil</span></h3>
+                    <p>Notre expertise du web à votre disposition pour trouver des solutions efficaces, pragmatiques et pérennes.</p>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="icon-sm-side left service">
+                    <i class="fa fa-round fa-3x fa-eye"></i>
+                    <h3 class="title"><span>Audits</span></h3>
+                    <p>Performance, qualité du code, accessibilité, SEO, sécurité.</p>
+                </div>
+            </div>
+        </div>
+        <div class="mb row">
+            <div class="col-md-5 col-sm-offset-1">
+                <div class="icon-sm-side right service">
+                    <i class="fa fa-round fa-3x fa-phone"></i>
+                    <h3 class="title"><span>Maintenance et support</span></h3>
+                    <p>Nous proposons des plans de maintenance mensuels à la carte.</p>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="icon-sm-side left service">
+                    <i class="fa fa-round fa-3x fa-code"></i>
+                    <h3 class="title"><span>Développement marque blanche</span></h3>
+                    <p>Service de développement en marque blanche pour les startups et les agences.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION TECHNOLOGIES -->
+<!--===============================================================-->
+<section class="section section-sm section-both section-light" id="section-technologies">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h3 class="title-section text-theme title-xl hr primary-color text-uppercase">Technologies</h3>
+                <p class="text-theme lead lead-section">Nous sommes experts avec les technologies et outils suivants :</p>
+            </div>
+        </div>
+        <div class="row mb">
+            <div class="col-sm-3">
+                <div class="icon-box bordered techno-box">
+                    <i class="fa fa-3x primary-color fa-langages"></i>
+                    <h3 class="title-sm text-theme mt-10 primary-color">Langages</h3>
+                    <ul class="text-theme list-unstyled">
                         <li>PHP</li>
                         <li>Ruby</li>
                         <li>Javascript</li>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
                     </ul>
-                    <h4>Frameworks</h4>
-                    <ul>
-                        <li>Rails</li>
-                        <li>Solidus (e-commerce)</li>
-                        <li>Shopify (e-commerce)</li>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="icon-box bordered techno-box">
+                    <i class="fa fa-3x primary-color fa-frameworks"></i>
+                    <h3 class="title-sm text-theme mt-10 primary-color">Frameworks</h3>
+                    <ul class="text-theme list-unstyled">
                         <li>Drupal</li>
+                        <li>Rails</li>
                     </ul>
-                    <h4>Devops</h4>
-                    <ul>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="icon-box bordered techno-box">
+                    <i class="fa fa-3x primary-color fa-e-commerce"></i>
+                    <h3 class="title-sm text-theme mt-10 primary-color">E-commerce</h3>
+                    <ul class="text-theme list-unstyled">
+                        <li>Drupal Commerce</li>
+                        <li>Shopify</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="icon-box bordered techno-box">
+                    <i class="fa fa-3x primary-color fa-devops"></i>
+                    <h3 class="title-sm text-theme mt-10 primary-color">Devops</h3>
+                    <ul class="text-theme list-unstyled">
                         <li>Ansible</li>
                         <li>Docker</li>
-                        <li>Rancher</li>
-                        <li>Vagrant</li>
+                        <li>Jenkins</li>
+                        <li>Capistrano</li>
+                        <li>OpenStack</li>
                     </ul>
                 </div>
             </div>
-        </section>
-
-        <!-- Values -->
-        <section id="values" class="dark">
-            <div class="row">
-                <div class="5u 12u$(medium)">
-                    <header class="major">
-                        <h2>Why choose Khawa?</h2>
-                    </header>
-                    <h4>Quality</h4>
-                    <ul>
-                        <li>Documented code to ease future evolutions and maintenance</li>
-                        <li>USe of best practices to control technical debt</li>
-                        <li>Code reviews: code is reviewed by a tier developer before being integrated to the project</li>
-                        <li>Automated tests to catch errors before shipping to production</li>
-                        <li>Agile methodologies to solve complex and changing problems while shipping in short cycles</li>
-                    </ul>
-                    <h4>Transparency</h4>
-                    <ul>
-                        <li>Clear and detailed proposals that list every task with their estimated time</li>
-                        <li>An access to the code repository to follow code evolutions</li>
-                        <li>We are available by chat, emaiul or phone</li>
-                        <li>Monthly reports that describe what has been done</li>
-                    </ul>
-                </div>
-                <div class="6u$ -1u 12u$(medium)">
-                    <header class="major">
-                        <h2>Values</h2>
-                    </header>
-                    <dl>
-                        <dt><h4>Quality deliverables</h4></dt>
-                        <dd>
-                            <p>We set up a strict workflow to ensure we deliver high quality deliverables: continuous training, enforcement of industry best practices, clean and commented code, automated tests, code reviews. We build robust and resilient solutions in order to maximize the return on investment for our clients.</p>
-                        </dd>
-                        <dt><h4>Technological watch</h4></dt>
-                        <dd>
-                            <p>We regularly try out the latest technologies to provide our clients with the best advices regarding technologies and innovative solutions.</p>
-                        </dd>
-                        <dt><h4>Open source</h4></dt>
-                        <dd><p>We use existing software components and only develop features specific to your project, thus minimizing development costs. We try to give back to the open source community as much as we can.</p></dd>
-                    </dl>
-                </div>
-            </div>
-        </section>
-
-        <!-- Story -->
-        <section id="story">
-            <header class="major">
-                <h2>The founders' story</h2>
-            </header>
-            <p>
-                <span class="image right">
-                    <img src="/images/KhawaKharpo.JPG" alt="Khawa Karpo moutain" />
-                </span>
-                Antoine and François are two long time friends who lived in Asia for a while after graduating in France. Primarily based in Beijing, they have been working in the web industry for more than eight years.
-                <br/><br/>
-                Working in a multicultural environment in startups, web agencies or as independant contractors, they have gained a lot of experience in technical leadership and in shipping web projects of any size.
-                <br/><br/>
-                Khawa Karpo is the name of the mountain where Antoine and François decided to join their efforts and found Khawa Technology.
-            </p>
-        </section>
-
-        <!-- Posts -->
-        <section class="posts dark">
-            {% for post in site.posts limit:3 %}
-            {% assign mod3 = forloop.index | modulo: 3 %}
-            <article>
-                <header>
-                    <span class="date">{{ post.date | date_to_string }}</span>
-                    <h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</h2>
-                </header>
-                <a href="{{ post.url | absolute_url }}" class="image fit"><img src="{{ post.image | absolute_url }}" alt="" /></a>
-                <p>{{ post.excerpt }}</p>
-                <ul class="actions">
-                    <li><a href="{{ post.url | absolute_url }}" class="button">Full Story</a></li>
-                </ul>
-            </article>
-            {% if mod3 == 0 %}
-            <article>
-            </article>
-            {% endif %}
-            {% endfor %}
-        </section>
-
-        <!-- Footer -->
-        <footer>
-            <ul class="actions">
-                <li><a href="{{ "/blog/" | absolute_url }}" class="button">Our Blog</a></li>
-            </ul>
-        </footer>
+        </div>
     </div>
+</section>
 
-    <!-- Footer -->
-    {% include foot.html %}
-</div>
+<!-- SECTION MARQUE BLANCHE -->
+<!--===============================================================-->
+<section id="section-white-label" class="section section-dark section-both section-sm">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h3 class="title-xl hr primary-color text-uppercase title-section">Développement en marque blanche</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 text-justify">
+                <div class="field field--name-body field--type-text-with-summary field--label-hidden lead-section lead text-theme field--item">
+                    <p>Vous êtes en recherche de compétences techniques pointues ou de renforts ponctuels sur un projet ? Nous vous proposons un service de développement en marque blanche qui peut prendre deux formes :</p>
+                    <p><strong>Projet en marque blanche</strong> : vous nous fournissez le design, les wireframes et êtes en charge de la gestion de projet, nous nous occupons de tout en ce qui concerne les développements : analyse, architecture, planning, développement et déploiement.</p>
+                    <p><strong>Tierce maintenance applicative en marque blanche</strong> : vous avez un problème technique ou des évolutions mineures à réaliser sur un projet et n'avez pas les ressources pour vous en occuper, Khawa Technology sous-traite vos opération de maintenance, quelque soit la complexité du projet.</p>
+                </div>
+            </div>
+            <div class="col-sm-5 col-sm-offset-1 center-image">
+                <img src="{{ 'images/markus-spiske-109588.jpg' | absolute_url }}" alt="developer screen"
+                     typeof="foaf:Image" class="img-responsive" />
+            </div>
+        </div>
+    </div>
+</section>
 
-<!-- Scripts -->
-{% include scripts-main.html %}
-<script src="{{ "/assets/js/morphext.min.js" | absolute_url }}"></script>
-<script>
-$(document).ready(function() {
-    // Rotate text in Lead
-    $("#js-rotate-service").Morphext({
-        animation: "fadeInUp",
-        separator: ",",
-        speed: 3000
-    });
+<!-- SECTION CTA -->
+<!--===============================================================-->
+<section class="clearfix section-polygonal-primary">
+    <div class="opacity-layer section section-sm section-both">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3 text-center">
+                    <p class="lead text-theme">
+                        Lancer un projet web n’est pas une mince affaire. Les enjeux sont sérieux et les écueils nombreux.
+                    </p>
+                    <p class="lead text-theme">
+                        Khawa Technology vous accompagne tout au long de votre projet afin d&#039;en assurer la réussite. Laissez-vous porter par notre expertise et restez concentrés sur votre coeur de métier.
+                    </p>
+                    <a href="/fr/contact" class="text-theme btn btn-primary btn-lg btn-rounded">Contactez-nous</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    $("#js-rotate-product").Morphext({
-        animation: "fadeInDown",
-        separator: ",",
-        speed: 3000
-    });
-});
-</script>
-</body>
-</html>
+<!-- SECTION LEQUIPE -->
+<!--===============================================================-->
+<section class="clearfix section section-both section-light section-sm" id="section-team">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3 text-center">
+                <h2 class="block-title title-xl title-section text-uppercase hr primary-color">L'équipe</h2>
+            </div>
+        </div>
+        <div class="mb row">
+            <div class="col-md-6">
+                <div class="team-member teaser clearfix text-center">
+                    <img src="{{ 'images/profile-square.jpg' | absolute_url }}"
+                         alt="François Koessler" typeof="foaf:Image" class="img-circle center-block mb-16" />
+                    <h3 class="text-theme"><span>François Koessler</span></h3>
+                    <div>Directeur général - Ingénieur</div>
+                    <small></small>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="team-member teaser clearfix text-center">
+                    <img src="{{ 'images/profil-antoine.jpg' | absolute_url }}" alt="Antoine Henry"
+                         typeof="foaf:Image" class="img-circle center-block mb-16" />
+                    <h3 class="text-theme"><span>Antoine Henry</span></h3>
+                    <div>Directeur technique - Ingénieur</div>
+                    <small></small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION VALUES -->
+<!--===============================================================-->
+<section id="section-values" class="section section-dark section-both section-sm">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h3 class="title-xl hr primary-color text-uppercase title-section">Nos valeurs</h3>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-sm-8 col-sm-offset-2 lead">
+                <p><strong>Des livrables de qualité</strong></p>
+                <p>Nous avons mis en place des méthodes rigoureuses nous permettant de fournir des livrables de haute qualité : formation continue, respect des bonnes pratiques, code propre et commenté, test automatisés, revues de code. Nous développons des solutions robustes et pérennes afin d'offrir un retour sur investissement maximal à nos clients.</p>
+                <p><strong>Veille technologique</strong></p>
+                <p>Nous testons régulièrement les dernières technologies afin d'assurer notre rôle de conseil technologique et d'innovation auprès de nos clients.</p>
+                <p><strong>Open source</strong></p>
+                <p>Nous utilisons des briques logicielles open source et ne développons que les besoins spécifiques à votre projet, minimisant ainsi les coûts de développement. En retour nous nous impliquons dans la communauté open source autant que possible.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION POURQUOI KHAWA -->
+<!--===============================================================-->
+<section id="section-why-khawa" class="section section-light section-both section-sm">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h3 class="title-xl hr primary-color text-uppercase title-section">Pourquoi choisir Khawa ?</h3>
+            </div>
+        </div>
+        <div class="row lead text-justify">
+            <div class="col-sm-5">
+                <p><strong>Qualité</strong></p>
+                <ul>
+                    <li>Code documenté pour faciliter les évolutions et la maintenance future.</li>
+                    <li>Respect des bonnes pratiques pour limiter la dette technique.</li>
+                    <li>Revues de code : le code est analysé et validé par un développeur tiers avant d'être intégré au projet.</li>
+                    <li>Mise en place de tests automatisés pour détecter les erreurs avant le déploiement en production.</li>
+                    <li>Utilisation des méthodes agiles permettant de répondre à des problèmes complexes et changeants en livrant en cycles courts.</li>
+                </ul>
+            </div>
+            <div class="col-sm-5 col-sm-offset-1">
+                <p><strong>Transparence</strong></p>
+                <ul>
+                    <li>Des devis clairs et détaillés listant les tâches à réaliser et le temps estimé.</li>
+                    <li>Un accès à git pour suivre les évolutions du code.</li>
+                    <li>Un accès à notre logiciel de gestion de projet pour suivre l'évolution des tâches en temps réel.</li>
+                    <li>Disponibilité par mail, chat ou téléphone.</li>
+                    <li>Des rapports décrivant les tâches réalisées.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION TESTIMONIAL -->
+<!--===============================================================-->
+<section class="section-polygonal-primary" id="section-testimonials">
+    <div class="opacity-layer section section-sm section-both">
+        <div class="container">
+            <div class="col-sm-6">
+                <div class="wrapper-slider text-center">
+                    <div id="carousel-22" class="carousel slide" data-ride="carousel" data-interval="false">
+                        <div class="carousel-inner">
+                            <div class="active item">
+                                <img src="{{ 'images/testimonials/testimonials-PA.jpg' | absolute_url }}"
+                                     alt="Logo victoriakhashop" typeof="foaf:Image" class="img-circle center-block" />
+                                <h3 class="title-xs text-theme mt-16">Philippe Audra</h3>
+                                <p class="lead text-theme">
+                                    <i class="fa fa-quote-left"></i>
+                                    Excellente prestation. Travail précis, rapide et efficace. Un vrai plaisir de collaborer avec Khawa Technology.
+                                    <i class="fa fa-quote-right"></i>
+                                </p>
+                            </div>
+                            <div class="item">
+                                <img src="{{ 'images/testimonials/testimonials-JNS.jpg' | absolute_url }}"
+                                     alt="Portrait Jean Noël" typeof="foaf:Image" class="img-circle center-block" />
+                                <h3 class="title-xs text-theme mt-16">Jean Noël Schilling</h3>
+                                <p class="lead text-theme">
+                                    <i class="fa fa-quote-left"></i>
+                                    Nous avons contracté Khawa Technology afin d&#039;améliorer notre planification des ressources à l&#039;aide d&#039;outils en ligne. Ils ont soigneusement pris en considération nos besoins, ont apporté de nouvelles idées et ont donné à tous les participants au projet des opportunités de faire des retours. Merci pour ce bon travail et votre professionnalisme.
+                                    <i class="fa fa-quote-right"></i>
+                                </p>
+                            </div>
+                            <div class="item">
+                                <img src="{{ 'images/testimonials/testimonials-VP.jpg' | absolute_url }}"
+                                     alt="Vanessa Perillat" typeof="foaf:Image" class="img-circle center-block" />
+                                <h3 class="title-xs text-theme mt-16">Vanessa Perillat</h3>
+                                <p class="lead text-theme">
+                                    <i class="fa fa-quote-left"></i>
+                                    Quel bonheur de travailler avec Khawa Technology ! Il sont compétents, rigoureux, honnêtes, intelligents. Je les ai déjà recommandés à d&#039;autres entreprises qui utilisent à présent leurs services. C&#039;est extrêmement rassurant de les avoir à nos côtés pour gérer nos projets web :)
+                                    <i class="fa fa-quote-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators carousel-indicators-testimonial">
+                            <li data-target="#carousel-22" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-22" data-slide-to="1" class=""></li>
+                            <li data-target="#carousel-22" data-slide-to="2" class=""></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5 col-sm-offset-1">
+                <div class="js-view-dom-id-5f54fbfb7ea5ce59171f8e81da6fc60abd6f4b512af8681c795fd115756132a5">
+                    <p class="lead text-theme text-center">Ils nous font confiance :</p>
+                    <div id="owl-clients" class="owl-carousel owl-theme mt-20">
+                        <div class="item">
+                            <img src="{{ 'images/clients/logowhite-fahrner.png' | absolute_url }}"
+                                 alt="Fahrner logo" title="Fahrner" typeof="foaf:Image" class="img-responsive" />
+                        </div>
+                        <div>
+                            <img src="{{ 'images/clients/logowhite-travelstone.png' | absolute_url }}"
+                                 alt="Travel-stone logo" title="Travel-stone" typeof="foaf:Image" class="img-responsive" />
+                        </div>
+                        <div>
+                            <img src="{{ 'images/clients/logowhite-asiafocusprod.png' | absolute_url }}"
+                                 alt="Asia Focus Production logo" title="Asia Focus Production" typeof="foaf:Image" class="img-responsive" />
+                        </div>
+                        <div>
+                            <img src="{{ 'images/clients/logowhite-karanta.png' | absolute_url }}"
+                                 alt="Karanta logo" title="Karanta" typeof="foaf:Image" class="img-responsive" />
+                        </div>
+                        <div>
+                            <img src="{{ 'images/clients/logowhite-victoriakha.png' | absolute_url }}"
+                                 alt="Victoria Khä logo" title="Victoria Khä" typeof="foaf:Image" class="img-responsive" />
+                        </div>
+                    </div>
+                    <div class="lead text-theme text-center mt-40">
+                        <p>Vous aussi, rejoignez les rangs de nos clients satisfaits.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION OUR WORK -->
+<!--===============================================================-->
+<!--<section id="section-case-studies" class="section section-sm section-both section-light">-->
+    <!--<div class="container">-->
+        <!--&lt;!&ndash; NAVIGATION &ndash;&gt;-->
+        <!--<div class="row">-->
+            <!--<h3 class="title-section title-xl text-theme hr primary-color text-center text-theme-lg">Nos dernières réalisations</h3>-->
+            <!--<ul class="list-unstyled text-center text-theme-lg">-->
+                <!--<li class="filter btn btn-ghost btn-orange" data-filter="all">Tous</li>-->
+                <!--<li class="filter btn btn-ghost btn-orange" data-filter=".web-app">Applications web</li>-->
+                <!--<li class="filter btn btn-ghost btn-orange" data-filter=".e-commerce">E-Commerce</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <!--&lt;!&ndash; PORTFOLIO GALLERY CONTAINER&ndash;&gt;-->
+        <!--<div id="container-mixitup">-->
+
+            <!--<div class="row">-->
+
+                <!--<div class="mix e-commerce all col-sm-4 col-xs-12">-->
+                    <!--<a href="#" class="img-wrapper">-->
+                        <!--<img class="img-responsive" src="assets/theme/images/portfolio/screenshot-victoriakhashop.png" alt="victoriakhashop.com">-->
+                    <!--</a>-->
+                    <!--<div class="caption-portfolio text-center">-->
+                        <!--<h3 class="text-theme title-xs">VictoriaKhaShop</h3>-->
+                        <!--<p class="text-theme">Boutique en ligne Shopify</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="mix web-app all col-sm-4 col-xs-12">-->
+                    <!--<a href="#" class="img-wrapper">-->
+                        <!--<img class="img-responsive" src="assets/theme/images/portfolio/screenshot-fahrner.png" alt="intranet fahrner">-->
+                    <!--</a>-->
+                    <!--<div class="caption-portfolio text-center">-->
+                        <!--<h3 class="text-theme title-xs">Intranet Fahrner</h3>-->
+                        <!--<p class="text-theme">Outils ERP/CRM Ruby on Rails</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="mix e-commerce all col-sm-4 col-xs-12">-->
+                    <!--<a href="#" class="img-wrapper">-->
+                        <!--<img class="img-responsive" src="assets/theme/images/portfolio/screenshot-karanta.png" alt="karanta.fr">-->
+                    <!--</a>-->
+                    <!--<div class="caption-portfolio text-center">-->
+                        <!--<h3 class="text-theme title-xs">Karanta</h3>-->
+                        <!--<p class="text-theme">Boutique en ligne Magento</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="mix e-commerce all col-sm-4 col-xs-12">-->
+                    <!--<a href="#" class="img-wrapper">-->
+                        <!--<img class="img-responsive" src="assets/theme/images/portfolio/screenshot-victoriakhashop.png" alt="victoriakhashop.com">-->
+                    <!--</a>-->
+                    <!--<div class="caption-portfolio text-center">-->
+                        <!--<h3 class="text-theme title-xs">VictoriaKhaShop</h3>-->
+                        <!--<p class="text-theme">Boutique en ligne Shopify</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="mix web-app all col-sm-4 col-xs-12">-->
+                    <!--<a href="#" class="img-wrapper">-->
+                        <!--<img class="img-responsive" src="assets/theme/images/portfolio/screenshot-fahrner.png" alt="intranet fahrner">-->
+                    <!--</a>-->
+                    <!--<div class="caption-portfolio text-center">-->
+                        <!--<h3 class="text-theme title-xs">Intranet Fahrner</h3>-->
+                        <!--<p class="text-theme">Outils ERP/CRM Ruby on Rails</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="mix e-commerce all col-sm-4 col-xs-12">-->
+                    <!--<a href="#" class="img-wrapper">-->
+                        <!--<img class="img-responsive" src="assets/theme/images/portfolio/screenshot-karanta.png" alt="karanta.fr">-->
+                    <!--</a>-->
+                    <!--<div class="caption-portfolio text-center">-->
+                        <!--<h3 class="text-theme title-xs">Karanta</h3>-->
+                        <!--<p class="text-theme">Boutique en ligne Magento</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+            <!--</div>-->
+        <!--</div>-->
+        <!--&lt;!&ndash; PORTFOLIO GALLERY CONTAINER END&ndash;&gt;-->
+    <!--</div>-->
+<!--</section>-->
+
+<!-- SECTION STORY -->
+<!--===============================================================-->
+<section id="section-story" class="section section-dark section-both section-sm">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h3 class="title-xl hr primary-color text-uppercase title-section">La petite histoire</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-5 center-image">
+                <img src="{{ 'images/bg/KhawaKharpo.jpg' | absolute_url }}"
+                     alt="Khawa Karpo" typeof="foaf:Image" class="img-responsive" />
+            </div>
+            <div class="col-sm-6 col-sm-offset-1 text-justify">
+                <div class="lead-section lead text-theme">
+                    <p>Antoine et François sont deux amis de longue date partis vivre en Asie une fois leur diplôme obtenu. Basés principalement à Pékin, ils ont travaillé dans l'industrie du web pendant plus de huit années. Ayant évolués dans un environnement multiculturel, en startup, agence web et en tant qu'indépendants, ils ont acquis une expérience solide dans la livraison de projets de tailles variées et le leadership technique.</p>
+                    <p>Khawa Karpo est le nom de la montagne où Antoine et François ont pris la décision de joindre leurs efforts pour créer la société de développement web Khawa Technology.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
