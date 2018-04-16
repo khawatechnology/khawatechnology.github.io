@@ -134,6 +134,79 @@
             });
 
         }
+
+        /**
+         * Calls Morphext library on background image
+         * custom block's taglines
+         */
+        var $section_top = $('#section-top');
+        if ($section_top.length >= 1) {
+            // Rotate services in background image block's tagline
+            $("#js-rotate-service").Morphext({
+                // The [in] animation type. Refer to Animate.css for a list of available animations.
+                animation: "fadeInDown",
+                // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
+                separator: ",",
+                // The delay between the changing of each phrase in milliseconds.
+                speed: 3000
+            });
+            // Rotate web products in background image block's tagline
+            $("#js-rotate-product").Morphext({
+                // The [in] animation type. Refer to Animate.css for a list of available animations.
+                animation: "fadeInUp",
+                // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
+                separator: ",",
+                // The delay between the changing of each phrase in milliseconds.
+                speed: 3000
+            });
+        }
+
+        /**
+         * Calls Owl Carousel on homepage's clients
+         */
+        var $owl_clients = $('#owl-clients');
+        if ($owl_clients.length >= 1) {
+            $owl_clients.owlCarousel({
+                autoplay: true,
+                items: 3,
+                loop: true,
+                dots: false,
+                nav: false,
+                responsive:{
+                    0:{
+                        items: 2
+                    },
+                    450:{
+                        items: 3
+                    }
+                }
+            });
+        }
+
+        /**
+         * Calls Owl Carousel on case studies (case study page)
+         */
+        var $owl_case_studies = $('#owl-case-studies');
+        if ($owl_case_studies.length >= 1) {
+            $owl_case_studies.find('.owl-carousel').owlCarousel({
+                autoplay: false,
+                items: 3,
+                loop: true,
+                dots: false,
+                nav: true,
+                navContainer: '.owl-buttons',
+                navText: ['', ''],
+                responsive:{
+                    0:{
+                        items: 2
+                    },
+                    450:{
+                        items: 3
+                    }
+                }
+            });
+
+        }
     });
 })(jQuery);
 
