@@ -1,0 +1,55 @@
+<div id="header">
+    <nav id="nav" class="navbar navbar-default navbar-fixed-top {% if include.is_homepage == true %} index-nav {% else %} navbar-opaque {% endif %}">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span>Menu</span>
+                </button>
+                <a class="navbar-brand {% if include.is_homepage == true %} switch-brand {% endif %}"
+                   href="{{ '/' | absolute_url }}">
+                    {% if include.is_homepage == true %}
+                        <img class="img-responsive"
+                             src="{{ 'images/logo/Khawa_logo_white_280x92_centurygothic.png' | absolute_url }}"
+                             alt="Khawa Technology logo">
+                    {% endif %}
+                    <img class="img-responsive switch-logo"
+                         src="{{ 'images/logo/Khawa_logo_colorful_280x92_centurygothic.png' | absolute_url }}"
+                         alt="Khawa Technology logo">
+                </a>
+            </div>
+
+            <div id="navbar" class="navbar-collapse collapse">
+                <div id="main-navigation">
+
+                    <ul class="nav navbar-nav navbar-left">
+                        {% for item in site.data.menu_items %}
+                            <li class="{% if item.url == page.url %}active{% endif %}">
+                                <a href="{{ item.url }}" data-target="{{ item.data-target }}"
+                                   class="{% if item.url == page.url %}is-active{% endif %}">
+                                    {{ item.title }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <ul id="language-switcher" class="links nav navbar-nav navbar-right">
+                    <li id="language-menu-dropdown" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Langue
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-left" role="menu">
+                            <li hreflang="en">
+                                <a href="/en" class="language-link" hreflang="en">English</a>
+                            </li>
+                            <li hreflang="fr" class="is-active">
+                                <a href="/fr" class="language-link is-active" hreflang="fr">Français</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>

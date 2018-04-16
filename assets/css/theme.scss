@@ -4173,3 +4173,11 @@ article.case-study.default {
   }
 }
 
+body.padding-top {
+  padding-top: 60px;
+}
+@media (min-width: 768px) {
+  body.padding-top {
+    padding-top: 92px;
+  }
+}

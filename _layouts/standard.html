@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body class="padding-top">
+<div class="layout-container wrapper-body" itemscope itemtype="http://schema.org/Corporation">
+    {% include header.html %}
+    <div class="section-heading-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="heading-page text-center-xs primary-color">{{ page.title }}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="section">
+        <div class="container">
+            {{ content }}
+        </div>
+    </section>
+    {% include footer.html %}
+</div>
+{% include footer_js.html %}
+</body>
+
+</html>

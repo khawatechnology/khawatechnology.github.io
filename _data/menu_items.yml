@@ -1,0 +1,30 @@
+---
+- title: Accueil
+  url: /#section-top
+  data-target: '#section-top'
+
+- title: Services
+  url: /#section-services
+  data-target: '#section-services'
+
+- title: Technologies
+  url: /#section-technologies
+  data-target: '#section-technologies'
+
+- title: L'équipe
+  url: /#section-team
+  data-target: '#section-team'
+
+- title: Valeurs
+  url: /#section-values
+  data-target: '#section-values'
+
+- title: Réalisations
+  url: /#section-case-studies
+  data-target: '#section-case-studies'
+
+- title: Articles
+  url: /articles/
+
+- title: Contact
+  url: /contact/
