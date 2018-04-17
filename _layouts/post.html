@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body class="padding-top">
+<div class="layout-container wrapper-body" itemscope itemtype="http://schema.org/Corporation">
+    {% include header.html %}
+    <div class="section-heading-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="heading-page text-center-xs primary-color">Articles</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="section">
+        <div class="container">
+            <div class="region region-content">
+
+                <div class="row">
+                    <div class="col-sm-8 col-sm-push-4 grid-posts">
+                        {% if page.path contains '_posts' %}
+                            {% include post_header.html %}
+                        {% endif %}
+                        {{ content }}
+                    </div>
+                    <aside class="col-sm-4 col-sm-pull-8">
+                        {% include sidebar_content.html %}
+                    </aside>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    {% include footer.html %}
+</div>
+{% include footer_js.html %}
+</body>
+
+</html>

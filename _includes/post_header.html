@@ -1,0 +1,20 @@
+<div class="wrapper-post-text text-theme-lg">
+    <h3 class="title-xl text-theme-lg primary-color"><span>{{ page.title }}</span></h3>
+    <ul class="list-unstyled list-inline post-date-author text-theme-lg">
+        <li>
+            <i class="fa fa-tag"></i>
+            {% for tag in page.tags %}
+                <a href="/tags/{{ tag }}">{{ tag }}</a>
+                {% if forloop.last == false %},&nbsp;{% endif %}
+            {% endfor %}
+        </li>
+        <li>
+            <span><i class="fa fa-calendar"></i>{{ page.date | date_to_string }}</span>
+        </li>
+    </ul>
+</div>
+<div class="text-theme-lg display-block">
+    <div class="center-image">
+        <img src="{{ page.image }}" typeof="foaf:Image" class="img-responsive">
+    </div>
+</div>
