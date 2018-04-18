@@ -28,7 +28,9 @@
         <div class="text-theme">
             {% for tag in site.tags %}
                 <div>
-                    <a href="/tag/{{ tag | first }}" class="btn btn-xs btn-default"><i class="fa fa-tags"></i>{{ tag | first }}</a>
+                    <a href="/articles/tags/{{ tag | first }}" class="btn btn-xs btn-default">
+                        <i class="fa fa-tags"></i>{{ tag | first }}
+                    </a>
                 </div>
             {% endfor %}
         </div>

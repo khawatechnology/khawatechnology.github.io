@@ -25,9 +25,9 @@
 
                     <ul class="nav navbar-nav navbar-left">
                         {% for item in site.data.menu_items %}
-                            <li class="{% if item.url == page.url %}active{% endif %}">
+                            <li class="{% if page.url contains item.url %}active{% endif %}">
                                 <a href="{{ item.url }}" data-target="{{ item.data-target }}"
-                                   class="{% if item.url == page.url %}is-active{% endif %}">
+                                   class="{% if page.url contains item.url %}is-active{% endif %}">
                                     {{ item.title }}
                                 </a>
                             </li>

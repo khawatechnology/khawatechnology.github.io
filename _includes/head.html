@@ -5,7 +5,7 @@
     <meta name="MobileOptimized" content="width" />
     <style>div#sliding-popup {background:#336fb6} #sliding-popup h1, #sliding-popup h2, #sliding-popup h3, #sliding-popup p { color:#ffffff;}</style>
     <meta name="HandheldFriendly" content="true" />
-    <title>Khawa Technology - Quality web development</title>
+    <title>{% if page.title.size > 0 %}{{ page.title }} | {% endif %}{{ site.title }} | {{ site.tagline }}</title>
     <meta name="description" content="Présentation de l'agence web Khawa Technology : services, valeurs, technologies et portfolio." />
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ 'assets/icon/apple-touch-icon-57x57.png' | absolute_url }}" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ 'assets/icon/apple-touch-icon-114x114.png' | absolute_url }}" />

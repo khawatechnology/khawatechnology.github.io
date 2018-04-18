@@ -3,7 +3,7 @@ layout: post
 title:  "Automate your deployment with Capistrano, git and RVM"
 date:   2017-01-20 10:55:40 +0200
 categories: Technical
-tags: [rails, devops]
+tags: [ruby-on-rails, devops]
 excerpt: This articles describes how to setup Capistrano in order to automate a Ruby on Rails application.
 image: /images/CapistranoLogo.png
 ---

@@ -4181,3 +4181,13 @@ body.padding-top {
     padding-top: 92px;
   }
 }
+
+.fit-height {
+  max-height: 300px;
+  overflow-y: hidden;
+
+  .img-responsive {
+    width: 100%;
+    height: auto;
+  }
+}

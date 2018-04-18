@@ -8,8 +8,7 @@
                     <div class="col-sm-6 col-xs-12">
                         <address itemprop="address">
                             <span itemprop="legalName">Khawa Technology SARL</span><br/>
-                            1 rue des fleurs,<br/>
-                            67460 Souffelweyersheim
+                            {{ site.location }}
                         </address>
                         <div>
                             Société au capital de 10.000€<br/>
@@ -18,8 +17,9 @@
                         </div>
                         <div class="text-theme mt-20">
                             <ul class="list-inline">
-                                <li><a href="https://github.com/orgs/khawatechnology"><i class="fa fa-github fa-round"></i></a></li>
-                                <li><a href="https://www.drupal.org/khawa-technology"><i class="fa fa-drupal fa-round"></i></a></li>
+                                <li><a href="https://github.com/{{ site.github }}"><i class="fa fa-bitbucket fa-round"></i></a></li>
+                                <li><a href="https://bitbucket.org/{{ site.bitbucket }}"><i class="fa fa-github fa-round"></i></a></li>
+                                <li><a href="https://www.drupal.org/{{ site.drupal }}"><i class="fa fa-drupal fa-round"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -53,8 +53,8 @@
                     <a id="scroll-top" href="#"><i class="fa fa-angle-up fa-2x"></i></a>
                     <img itemprop="logo" itemscope itemtype="https://schema.org/ImageObject"
                          src="{{ 'images/logo/Khawa_logo_white_92x92.png' | absolute_url }}"
-                         alt="Khawa Technology">
-                    <p class="copyright">Khawa Technology - Quality web development</p>
+                         alt="{{ site.title }}">
+                    <p class="copyright">{{ site.title }} - {{ site.tagline }}</p>
                 </div>
             </div>
         </div>

@@ -7,6 +7,15 @@ locale:       en_US
 baseurl:      "" # the subpath of your site, e.g. /blog
 url:          "" # the base hostname & protocol for your site
 
+collections:
+  posts:
+    title: Articles
+    output: true
+  article_tags:
+    title: Tags
+    output: true
+
+
 defaults:
 - scope:
     path: ''
@@ -15,6 +24,13 @@ defaults:
     permalink: "/articles/:title/"
     layout: post
     author:
+- scope:
+    path: ''
+    type: article_tags
+  values:
+    permalink: "/articles/tags/:title/"
+    layout: tag
+
 
 # Jekyll
 permalink:          /articles/:title/
@@ -37,6 +53,7 @@ disqus_shortname:   default
 # Social
 github:             khawatechnology
 bitbucket:          khawa
+drupal:             khawa-technology
 
 
 # personal

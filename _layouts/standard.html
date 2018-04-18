@@ -10,7 +10,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <h1 class="heading-page text-center-xs primary-color">{{ page.title }}</h1>
+                    <h1 class="heading-page text-center-xs primary-color">
+                        {% if page.path contains '_posts' %}
+                            Articles
+                        {% else if page.path contains '_article_tags' %}
+                            Tags
+                        {% else %}
+                            {{ page.title }}
+                        {% endif %}
+                    </h1>
                 </div>
             </div>
         </div>
