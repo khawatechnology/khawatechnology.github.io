@@ -6,4 +6,6 @@ sitemap:
     priority: 1.0
     lastmod: 2018-04-04
     changefreq: yearly
+lang: en
+ref: blog
 ---

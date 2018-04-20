@@ -6,6 +6,8 @@ categories: Technical
 tags: [rails, devops]
 excerpt: This articles describes how to setup Capistrano in order to automate a Ruby on Rails application.
 image: /images/CapistranoLogo.png
+lang: en
+ref: capistrano-deploy
 ---
 
 This articles describes how to setup Capistrano in order to automate a Ruby on Rails 4.2.3 application versioned with git on a server running RVM.

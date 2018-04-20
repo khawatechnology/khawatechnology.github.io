@@ -5,6 +5,8 @@ sitemap:
     priority: 0.7
     lastmod: 2018-04-03
     changefreq: never
+lang: en
+ref: legal
 ---
 ## Legal notice
 The website [khawa.tech](https://khawa.tech) is edited by Khawa Technology company.\\
