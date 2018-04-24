@@ -1,40 +1,54 @@
 ---
-- title:
-    en: Home
-    fr: Accueil
-  url: /#section-top
-  data-target: '#section-top'
+  - title:
+      en: Home
+      fr: Accueil
+    url:
+      en: /#section-top
+      fr: /accueil#section-top
+    data-target: '#section-top'
 
-- title:
-    en: Team
-    fr: L'équipe
-  url: /#section-team
-  data-target: '#section-team'
+  - title:
+      en: Team
+      fr: L'équipe
+    url:
+      en: /#section-team
+      en: /accueil#section-team
+    data-target: '#section-team'
 
-- title:
-    en: Services
-    fr: Services
-  url: /#section-services
-  data-target: '#section-services'
+  - title:
+      en: Services
+      fr: Services
+    url:
+      en: /#section-services
+      fr: /accueil#section-services
+    data-target: '#section-services'
 
-- title:
-    en: Technologies
-    fr: Technologies
-  url: /#section-technologies
-  data-target: '#section-technologies'
+  - title:
+      en: Technologies
+      fr: Technologies
+    url:
+      en: /#section-technologies
+      fr: /accueil#section-technologies
+    data-target: '#section-technologies'
 
-- title:
-    en: Why Khawa?
-    fr: Pourquoi Khawa ?
-  url: /#section-why-khawa
-  data-target: '#section-values'
+  - title:
+      en: Why Khawa?
+      fr: Pourquoi Khawa ?
+    url:
+      en: /#section-why-khawa
+      fr: /accueil#section-why-khawa
+    data-target: '#section-values'
 
-- title:
-    en: Articles
-    fr: Articles
-  url: /articles/
+  - title:
+      en: Articles
+      fr: Articles
+    url:
+      en: /articles/
+      fr: /articles/
 
-- title:
-    en: Contact
-    fr: Contact
-  url: /contact/
+  - title:
+      en: Contact
+      fr: Contact
+    url:
+      en: /contact-us/
+      fr: /contactez-nous/

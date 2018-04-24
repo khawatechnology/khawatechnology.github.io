@@ -25,9 +25,9 @@
 
                     <ul class="nav navbar-nav navbar-left">
                         {% for item in site.data.menu_items %}
-                            <li class="{% if page.url contains item.url %}active{% endif %}">
-                                <a href="{{ item.url }}" data-target="{{ item.data-target }}"
-                                   class="{% if page.url contains item.url %}is-active{% endif %}">
+                            <li class="{% if page.url contains item.url[page.lang] %}active{% endif %}">
+                                <a href="{{ item.url[page.lang] }}" data-target="{{ item.data-target }}"
+                                   class="{% if page.url contains item.url[page.lang] %}is-active{% endif %}">
                                     {{ item.title[page.lang] }}
                                 </a>
                             </li>
@@ -36,16 +36,36 @@
                 </div>
                 <ul id="language-switcher" class="links nav navbar-nav navbar-right">
                     <li id="language-menu-dropdown" class="dropdown">
+                        <!--TODO: Active item doesn't work yet-->
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             {{ site.t[page.lang].navbar_language }}
                         </a>
                         <ul class="dropdown-menu dropdown-menu-left" role="menu">
-                            <li hreflang="en">
-                                <a href="/en" class="language-link is-active" hreflang="en">English</a>
+                            {% assign current=page.lang %}
+                            {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+                            {% for post in posts %}
+                                {% if current contains post.lang %}
+                                    {% assign classes="is-active language-link" %}
+                                {% else %}
+                                    {% assign classes="language-link" %}
+                                {% endif %}
+                            <li>
+                                <a href="{{ post.url }}" class="{{ classes }}">{{ post.lang }}</a>
                             </li>
-                            <li hreflang="fr" class="is-active">
-                                <a href="/fr" class="language-link" hreflang="fr">Français</a>
+                            {% endfor %}
+
+                            {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+                            <h1>{{current}}</h1>
+                            {% for page in pages %}
+                            <li>
+                                {% if current contains page.lang %}
+                                    {% assign classes="is-active" %}
+                                {% else %}
+                                    {% assign classes="" %}
+                                {% endif %}
+                                <a href="{{ page.url }}" class="{{classes}} language-link">{{ page.lang }}</a>
                             </li>
+                            {% endfor %}
                         </ul>
                     </li>
                 </ul>
