@@ -4191,3 +4191,14 @@ body.padding-top {
     height: auto;
   }
 }
+
+form label.required::after {
+  background-image: url(../icon/required.svg);
+  -webkit-background-size: 10px 7px;
+  background-size: 10px 7px;
+  content: "";
+  display: inline-block;
+  line-height: 1;
+  height: 7px;
+  width: 10px;
+}
