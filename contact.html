@@ -1,0 +1,53 @@
+---
+layout: standard
+title: Contact
+---
+<div class="row">
+    <div class="col-md-5">
+        <h3 class="title-md text-theme text-uppercase hr-left primary-color">Contact form</h3>
+        <div class="form-bg text-theme">
+            <form method="POST" action="https://formspree.io/{{site.email}}">
+                <div class="form-group">
+                    <label class="control-label required" for="name">Name</label>
+                    <input required class="form-control" type="text" name="name" id="name" />
+                </div>
+                <div class="form-group">
+                    <label class="control-label required" for="email">Email</label>
+                    <input required class="form-control" type="email" name="email" id="email" size="60" maxlength="254"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="phone">Phone</label>
+                    <input class="form-control" type="text" name="phone" id="phone" />
+                </div>
+                <div class="form-group">
+                    <label class="control-label required" for="subject">Subject</label>
+                    <input required class="form-control" type="text" name="subject" id="subject" />
+                </div>
+                <div class="form-group">
+                    <div class="field">
+                        <label class="control-label required" for="message">Message</label>
+                        <textarea required class="form-control" name="message" id="message" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn-primary text-theme btn-lg btn-rounded button button--primary icon-before"
+                            type="submit" id="edit-submit" name="op" value="Send message">
+                        <i class="fa fa-paper-plane"></i>Send message
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="col-md-5 col-md-offset-1">
+        <section class="block block-block-content clearfix">
+            <h3 class="title-md text-theme text-uppercase hr-left primary-color">Contacting us ?</h3>
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
+                <p>We invite you to contact us using the web fom.</p>
+                <p>We'll get back to you within 24 hours to organize a conversation about your web project.</p>
+                <p>Don't forget to leave us your phone number if you want us to call you back.</p>
+                <p>Allergic to webforms? Send us an email at: <a href="mailto:contact@khawa.tech">contact@khawa.tech</a>.</p>
+            </div>
+        </section>
+    </div>
+</div>

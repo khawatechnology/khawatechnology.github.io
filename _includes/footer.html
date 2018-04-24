@@ -1,0 +1,62 @@
+<footer>
+    <!-- SECTION FOOTER -->
+    <!--===============================================================-->
+    <div class="section section-bg footer">
+        <div class="opacity-layer section section-both section-sm">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-12">
+                        <address itemprop="address">
+                            <span itemprop="legalName">Khawa Technology SARL</span><br/>
+                            {{ site.location }}
+                        </address>
+                        <div>
+                            Share capital: 10.000€<br/>
+                            SIRET: 82250716600012<br/>
+                            VAT number: FR08822507166
+                        </div>
+                        <div class="text-theme mt-20">
+                            <ul class="list-inline">
+                                <li><a href="https://github.com/{{ site.github }}"><i class="fa fa-bitbucket fa-round"></i></a></li>
+                                <li><a href="https://bitbucket.org/{{ site.bitbucket }}"><i class="fa fa-github fa-round"></i></a></li>
+                                <li><a href="https://www.drupal.org/{{ site.drupal }}"><i class="fa fa-drupal fa-round"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <h3 class="text-theme title-sm hr-left">Recent articles</h3>
+                        <ul class="list-unstyled text-theme">
+                            {% for post in site.posts limit:5 %}
+                                <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <h3 class="text-theme title-sm hr-left">Navigation</h3>
+                        <ul class="list-unstyled text-theme">
+                            <li><a href="{{ '/' | absolute_url }}">Homepage</a></li>
+                            <li><a href="{{ '/articles' | absolute_url }}">Articles</a></li>
+                            <li><a href="{{ '/contact' | absolute_url }}">Contact</a></li>
+                            <li><a href="{{ '/mentions-legales' | absolute_url }}">Legal notice</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--SECTION FOOTER BOTTOM -->
+    <!--===============================================================-->
+    <div class="section footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center col-footer-bottom">
+                    <a id="scroll-top" href="#"><i class="fa fa-angle-up fa-2x"></i></a>
+                    <img itemprop="logo" itemscope itemtype="https://schema.org/ImageObject"
+                         src="{{ 'images/logo/Khawa_logo_white_92x92.png' | absolute_url }}"
+                         alt="{{ site.title }}">
+                    <p class="copyright">{{ site.title }} - {{ site.tagline }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

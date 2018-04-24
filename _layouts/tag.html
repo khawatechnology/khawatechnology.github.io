@@ -1,0 +1,16 @@
+---
+layout: post
+---
+
+{% assign tag = page.slug  %}
+{% assign tag_posts = site.tags[tag] %}
+
+<h3 class="title-md text-theme hr-left primary-color mb">
+    {{ page.title }}
+</h3>
+
+{% for post in tag_posts %}
+    <div class="row">
+        {% include post_excerpt.html post=post %}
+    </div>
+{% endfor %}

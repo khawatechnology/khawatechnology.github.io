@@ -1,0 +1,26 @@
+---
+- title: Home
+  url: /#section-top
+  data-target: '#section-top'
+
+- title: Team
+  url: /#section-team
+  data-target: '#section-team'
+
+- title: Services
+  url: /#section-services
+  data-target: '#section-services'
+
+- title: Technologies
+  url: /#section-technologies
+  data-target: '#section-technologies'
+
+- title: Why Khawa?
+  url: /#section-why-khawa
+  data-target: '#section-values'
+
+- title: Articles
+  url: /articles/
+
+- title: Contact
+  url: /contact/

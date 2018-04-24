@@ -1,33 +1,50 @@
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="MobileOptimized" content="width" />
+    <style>div#sliding-popup {background:#336fb6} #sliding-popup h1, #sliding-popup h2, #sliding-popup h3, #sliding-popup p { color:#ffffff;}</style>
+    <meta name="HandheldFriendly" content="true" />
+    <title>{% if page.title.size > 0 %}{{ page.title }} | {% endif %}{{ site.title }} | {{ site.tagline }}</title>
+    <meta name="description" content="{{ page.description }}" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ 'assets/icon/apple-touch-icon-57x57.png' | absolute_url }}" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ 'assets/icon/apple-touch-icon-114x114.png' | absolute_url }}" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ 'assets/icon/apple-touch-icon-72x72.png' | absolute_url }}" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ 'assets/icon/apple-touch-icon-144x144.png' | absolute_url }}" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="{{ 'assets/icon/apple-touch-icon-60x60.png' | absolute_url }}" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ 'assets/icon/apple-touch-icon-120x120.png' | absolute_url }}" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{ 'assets/icon/apple-touch-icon-76x76.png' | absolute_url }}" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ 'assets/icon/apple-touch-icon-152x152.png' | absolute_url }}" />
+    <link rel="icon" type="image/png" href="{{ 'assets/icon/favicon-196x196.png' | absolute_url }}" sizes="196x196" />
+    <link rel="icon" type="image/png" href="{{ 'assets/icon/favicon-96x96.png' | absolute_url }}" sizes="96x96" />
+    <link rel="icon" type="image/png" href="{{ 'assets/icon/favicon-32x32.png' | absolute_url }}" sizes="32x32" />
+    <link rel="icon" type="image/png" href="{{ 'assets/icon/favicon-16x16.png' | absolute_url }}" sizes="16x16" />
+    <link rel="icon" type="image/png" href="{{ 'assets/icon/favicon-128.png' | absolute_url }}" sizes="128x128" />
+    <meta name="application-name" content="{{ site.name }} - {{ site.tagline }}"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="{{ 'assets/icon/mstile-144x144.png' }}" />
+    <meta name="msapplication-square70x70logo" content="{{ 'assets/icon/mstile-70x70.png' }}" />
+    <meta name="msapplication-square150x150logo" content="{{ 'assets/icon/mstile-150x150.png' }}" />
+    <meta name="msapplication-wide310x150logo" content="{{ 'assets/icon/mstile-310x150.png' }}" />
+    <meta name="msapplication-square310x310logo" content="{{ 'assets/icon/mstile-310x310.png' }}" />
+    <!--[if IE 8]><html class="ie8"><![endif]-->
+    <!-- Bootstrap -->
+    <link href="{{ 'assets/css/bootstrap.min.css' | absolute_url }}" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Plugins -->
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/css/owl.carousel.css' | absolute_url }}">
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/css/owl.theme.default.css' | absolute_url }}">
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/css/animate.css' | absolute_url }}">
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/css/morphext.css' | absolute_url }}">
+    <!-- Theme -->
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/css/theme.css' | absolute_url }}">
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/css/khawatik-drupal.css' | absolute_url }}">
 
-<title>{{ page.title }}</title>
-<meta name="description" content="{{ page.description }}">
-
-<link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ "assets/icon/apple-touch-icon-57x57.png" | absolute_url }}" />
-<link rel="apple-touch-icon-precomposed" sizes="60x60" href="{{ "assets/icon/apple-touch-icon-60x60.png" | absolute_url }}" />
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ "assets/icon/apple-touch-icon-72x72.png" | absolute_url }}" />
-<link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{ "assets/icon/apple-touch-icon-76x76.png" | absolute_url }}" />
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ "assets/icon/apple-touch-icon-114x144.png" | absolute_url }}" />
-<link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ "assets/icon/apple-touch-icon-120x120.png" | absolute_url }}" />
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ "assets/icon/apple-touch-icon-144x144.png" | absolute_url }}" />
-<link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ "assets/icon/apple-touch-icon-152x152.png" | absolute_url }}" />
-<link rel="icon" type="image/png" href="{{ "assets/icon/favicon-196x196.png" | absolute_url }}" sizes="196x196" />
-<link rel="icon" type="image/png" href="{{ "assets/icon/favicon-128x128.png" | absolute_url }}" sizes="128x128" />
-<link rel="icon" type="image/png" href="{{ "assets/icon/favicon-96x96.png" | absolute_url }}" sizes="96x96" />
-<link rel="icon" type="image/png" href="{{ "assets/icon/favicon-32x32.png" | absolute_url }}" sizes="32x32" />
-<link rel="icon" type="image/png" href="{{ "assets/icon/favicon-16x16.png" | absolute_url }}" sizes="16x16" />
-<meta name="application-name" content="Khawa Technology - Quality web development"/>
-<meta name="msapplication-TileColor" content="#FFFFFF" />
-<meta name="msapplication-TileImage" content="{{ "assets/icon/mstile-144x144.png" }}" | absolute_url />
-<meta name="msapplication-square70x70logo" content="{{ "assets/icon/mstile-70x70.png" | absolute_url }}" />
-<meta name="msapplication-square150x150logo" content="{{ "assets/icon/mstile-150x150.png" | absolute_url }}" />
-<meta name="msapplication-wide310x150logo" content="{{ "assets/icon/mstile-310-150.png" | absolute_url }}" />
-<meta name="msapplication-square310x310logo" content="{{ "assets/icon/mstile-310x310.png" | absolute_url }}" />
-<link rel="shortcut icon" href="{{ "/assets/icon/favicon.ico" | absolute_url }}">
-<meta name="msapplication-config" content="{{ "/assets/icon/browserconfig.xml" | absolute_url }}">
-<meta name="theme-color" content="#ffffff">
-
-<!-- CSS -->
-<link rel="stylesheet" href="{{ "/assets/css/main.css" | absolute_url }}" />
-<noscript><link rel="stylesheet" href="{{ "/assets/css/noscript.css" | absolute_url }}" /></noscript>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>

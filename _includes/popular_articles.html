@@ -1,0 +1,38 @@
+<div class="row-heading row-heading-mt-40">
+    <h3 class="title-sm text-uppercase hr-left primary-color">Recent articles</h3>
+</div>
+
+<div class="form-group">
+    <div class="row">
+        <div class="col-sm-12">
+            {% for post in site.posts limit:3 %}
+                <article>
+                    <h3 class="title-xs text-theme-zero display-inline-block">
+                        <a href="{{ post.url }}"><span>{{ post.title }}</span></a>
+                    </h3>
+                    <p class="text-theme-zero"><small>{{ post.date | date_to_string }}</small></p>
+                    <p>{{ post.excerpt }}</p>
+                </article>
+                {% if forloop.last == false %}<hr class="hr-divider-xs clearfix">{% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+
+    <div class="row-heading row-heading-mt-40">
+        <h3 class="title-sm text-uppercase hr-left text primary-color">Tags</h3>
+    </div>
+
+
+    <div class="col-sm-12 col-tags">
+        <div class="text-theme">
+            {% for tag in site.tags %}
+                <div>
+                    <a href="/articles/tags/{{ tag | first }}" class="btn btn-xs btn-default">
+                        <i class="fa fa-tags"></i>{{ tag | first }}
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

@@ -7,17 +7,33 @@ locale:       en_US
 baseurl:      "" # the subpath of your site, e.g. /blog
 url:          "" # the base hostname & protocol for your site
 
+collections:
+  posts:
+    title: Articles
+    output: true
+  article_tags:
+    title: Tags
+    output: true
+
+
 defaults:
 - scope:
     path: ''
     type: posts
   values:
-    permalink: "/blog/:title/"
+    permalink: "/articles/:title/"
     layout: post
     author:
+- scope:
+    path: ''
+    type: article_tags
+  values:
+    permalink: "/articles/tags/:title/"
+    layout: tag
+
 
 # Jekyll
-permalink:          /blog/:title/
+permalink:          /articles/:title/
 markdown:           kramdown
 highlighter:        rouge
 kramdown:
@@ -37,6 +53,7 @@ disqus_shortname:   default
 # Social
 github:             khawatechnology
 bitbucket:          khawa
+drupal:             khawa-technology
 
 
 # personal
@@ -52,14 +69,14 @@ plugins:
   - jekyll-gist
   - jekyll-paginate
 
-paginate: 6
-paginate_path: "/blog/page:num/"
+paginate: 2
+paginate_path: "articles/page:num"
 
 jekyll-mentions:
     base_url: https://github.com
 
 # Exclude list
-exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile, old, docker-compose, .idea/]
+exclude: [assets_back, index.html_back, blog.md, 404.html, legal.md, README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile, old, docker-compose, .idea/]
 
 t:
   en:

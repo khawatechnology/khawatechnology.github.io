@@ -1,0 +1,26 @@
+/* Colors */
+/* Colors */
+$primarycolor: #336fb6;
+$primarycolorhover: darken($primarycolor, 3%);
+$primarycoloractive: darken($primarycolorhover, 3%);
+
+$actioncolor1: #ff8f33;
+$actioncolor1hover: darken($actioncolor1, 3%);
+$actioncolor1active: darken($actioncolor1, 3%);
+
+$actioncolor2: #67c8d3;
+$actioncolor2hover: darken($actioncolor2, 3%);
+$actioncolor2active: darken($actioncolor2, 3%);
+
+$blackcolor: #231f20;
+$whitecolor: #ffffff;
+$brandcolor1: #c2e9ed;
+$brandcolor2: #85d3dc;
+$brandcolor3: #67c8d3;
+$brandcolor4: #adc5e2;
+$brandcolor5: #5c8cc5;
+
+$nav-hover-color: #f8f8f7;
+
+/* Fonts */
+$font-family: "Century Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
