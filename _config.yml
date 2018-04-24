@@ -1,8 +1,9 @@
 # Site
 title:        Khawa Technology
 tagline:      Quality Web Development
-bio:          'This is the bio'
-description:  "DESCRIPTION"
+feed:
+  en: /feed.xml
+  fr: /flux.xml
 locale:       en_US
 baseurl:      "" # the subpath of your site, e.g. /blog
 url:          "" # the base hostname & protocol for your site
@@ -78,6 +79,35 @@ jekyll-mentions:
 # Exclude list
 exclude: [assets_back, index.html_back, blog.md, 404.html, legal.md, README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile, old, docker-compose, .idea/]
 
+# Translations
 t:
   en:
+    home_header_tagline: Top engineers dedicated to your web project
+    home_header_tagline2_1: We
+    home_header_tagline2_2: develop, integrate a service with, audit
+    home_header_tagline2_3: your
+    home_header_tagline2_4: website, e-commerce store, API, Saas product
+    contact_us: Contact us
+    contact_us_1: Launching a web project ain't easy. Serious issues are at stake and there are numerous pitfalls.
+    contact_us_2: Khawa Technology stands by your side during the whole project's lifecycle in order to ensure its success. Let our expertise drive you and stay focused on your core business.
+    footer_share_capital: "Share capital: 10.000€"
+    footer_vat_number: "VAT number: FR08822507166"
+    footer_nav_home: Homepage
+    footer_nav_legal: Legal notice
+    recent_articles: Recent articles
+    navbar_language: Language
   fr:
+    home_header_tagline: Des ingénieurs au service de votre projet web
+    home_header_tagline2_1: Nous
+    home_header_tagline2_2: développons, intégrons avec, auditons
+    home_header_tagline2_3: votre
+    home_header_tagline2_4: site web, boutique en ligne, API, plateforme Saas
+    contact_us: Contactez-nous
+    contact_us_1: Lancer un projet web n’est pas une mince affaire. Les enjeux sont sérieux et les écueils nombreux.
+    contact_us_2: Khawa Technology vous accompagne tout au long de votre projet afin d'en assurer la réussite. Laissez-vous porter par notre expertise et restez concentrés sur votre coeur de métier.
+    footer_share_capital: "Capital : 10.000€"
+    footer_vat_number: "Numéro TVA : FR08822507166"
+    footer_nav_home: Accueil
+    footer_nav_legal: Mentions légales
+    recent_articles: Articles récents
+    navbar_language: Langue

@@ -11,9 +11,9 @@
                             {{ site.location }}
                         </address>
                         <div>
-                            Share capital: 10.000€<br/>
+                            {{ site.t[page.lang].footer_share_capital }}<br/>
                             SIRET: 82250716600012<br/>
-                            VAT number: FR08822507166
+                            {{ site.t[page.lang].footer_vat_number }}
                         </div>
                         <div class="text-theme mt-20">
                             <ul class="list-inline">
@@ -24,7 +24,7 @@
                         </div>
                     </div>
                     <div class="col-sm-3 col-xs-6">
-                        <h3 class="text-theme title-sm hr-left">Recent articles</h3>
+                        <h3 class="text-theme title-sm hr-left">{{ site.t[page.lang].recent_articles }}</h3>
                         <ul class="list-unstyled text-theme">
                             {% for post in site.posts limit:5 %}
                                 <li><a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -34,10 +34,10 @@
                     <div class="col-sm-3 col-xs-6">
                         <h3 class="text-theme title-sm hr-left">Navigation</h3>
                         <ul class="list-unstyled text-theme">
-                            <li><a href="{{ '/' | absolute_url }}">Homepage</a></li>
+                            <li><a href="{{ '/' | absolute_url }}">{{ site.t[page.lang].footer_nav_home }}</a></li>
                             <li><a href="{{ '/articles' | absolute_url }}">Articles</a></li>
                             <li><a href="{{ '/contact' | absolute_url }}">Contact</a></li>
-                            <li><a href="{{ '/mentions-legales' | absolute_url }}">Legal notice</a></li>
+                            <li><a href="{{ '/mentions-legales' | absolute_url }}"></a>{{ site.t[page.lang].footer_nav_legal }}</li>
                         </ul>
                     </div>
                 </div>

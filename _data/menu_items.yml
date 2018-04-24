@@ -1,26 +1,40 @@
 ---
-- title: Home
+- title:
+    en: Home
+    fr: Accueil
   url: /#section-top
   data-target: '#section-top'
 
-- title: Team
+- title:
+    en: Team
+    fr: L'équipe
   url: /#section-team
   data-target: '#section-team'
 
-- title: Services
+- title:
+    en: Services
+    fr: Services
   url: /#section-services
   data-target: '#section-services'
 
-- title: Technologies
+- title:
+    en: Technologies
+    fr: Technologies
   url: /#section-technologies
   data-target: '#section-technologies'
 
-- title: Why Khawa?
+- title:
+    en: Why Khawa?
+    fr: Pourquoi Khawa ?
   url: /#section-why-khawa
   data-target: '#section-values'
 
-- title: Articles
+- title:
+    en: Articles
+    fr: Articles
   url: /articles/
 
-- title: Contact
+- title:
+    en: Contact
+    fr: Contact
   url: /contact/

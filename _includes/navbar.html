@@ -28,7 +28,7 @@
                             <li class="{% if page.url contains item.url %}active{% endif %}">
                                 <a href="{{ item.url }}" data-target="{{ item.data-target }}"
                                    class="{% if page.url contains item.url %}is-active{% endif %}">
-                                    {{ item.title }}
+                                    {{ item.title[page.lang] }}
                                 </a>
                             </li>
                         {% endfor %}
@@ -37,7 +37,7 @@
                 <ul id="language-switcher" class="links nav navbar-nav navbar-right">
                     <li id="language-menu-dropdown" class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            Language
+                            {{ site.t[page.lang].navbar_language }}
                         </a>
                         <ul class="dropdown-menu dropdown-menu-left" role="menu">
                             <li hreflang="en">
