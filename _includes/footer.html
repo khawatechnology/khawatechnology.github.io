@@ -11,9 +11,9 @@
                             {{ site.location }}
                         </address>
                         <div>
-                            Société au capital de 10.000€<br/>
+                            Share capital: 10.000€<br/>
                             SIRET: 82250716600012<br/>
-                            Numéro de TVA: FR08822507166
+                            VAT number: FR08822507166
                         </div>
                         <div class="text-theme mt-20">
                             <ul class="list-inline">
@@ -24,7 +24,7 @@
                         </div>
                     </div>
                     <div class="col-sm-3 col-xs-6">
-                        <h3 class="text-theme title-sm hr-left">Articles récents</h3>
+                        <h3 class="text-theme title-sm hr-left">Recent articles</h3>
                         <ul class="list-unstyled text-theme">
                             {% for post in site.posts limit:5 %}
                                 <li><a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -37,7 +37,7 @@
                             <li><a href="{{ '/' | absolute_url }}">Homepage</a></li>
                             <li><a href="{{ '/articles' | absolute_url }}">Articles</a></li>
                             <li><a href="{{ '/contact' | absolute_url }}">Contact</a></li>
-                            <li><a href="{{ '/mentions-legales' | absolute_url }}">Mentions légales</a></li>
+                            <li><a href="{{ '/mentions-legales' | absolute_url }}">Legal notice</a></li>
                         </ul>
                     </div>
                 </div>

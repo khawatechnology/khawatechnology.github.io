@@ -1,7 +1,11 @@
 ---
-- title: Accueil
+- title: Home
   url: /#section-top
   data-target: '#section-top'
+
+- title: Team
+  url: /#section-team
+  data-target: '#section-team'
 
 - title: Services
   url: /#section-services
@@ -11,17 +15,9 @@
   url: /#section-technologies
   data-target: '#section-technologies'
 
-- title: L'équipe
-  url: /#section-team
-  data-target: '#section-team'
-
-- title: Valeurs
-  url: /#section-values
+- title: Why Khawa?
+  url: /#section-why-khawa
   data-target: '#section-values'
-
-- title: Réalisations
-  url: /#section-case-studies
-  data-target: '#section-case-studies'
 
 - title: Articles
   url: /articles/
