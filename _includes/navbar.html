@@ -44,27 +44,16 @@
                             {% assign current=page.lang %}
                             {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
                             {% for post in posts %}
-                                {% if current contains post.lang %}
-                                    {% assign classes="is-active language-link" %}
-                                {% else %}
-                                    {% assign classes="language-link" %}
-                                {% endif %}
-                            <li>
-                                <a href="{{ post.url }}" class="{{ classes }}">{{ post.lang }}</a>
-                            </li>
+                                <li>
+                                    <a href="{{ post.url }}" class="{% if current contains post.lang %}is-active{% endif %}">{{ post.lang }}</a>
+                                </li>
                             {% endfor %}
 
                             {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
-                            <h1>{{current}}</h1>
                             {% for page in pages %}
-                            <li>
-                                {% if current contains page.lang %}
-                                    {% assign classes="is-active" %}
-                                {% else %}
-                                    {% assign classes="" %}
-                                {% endif %}
-                                <a href="{{ page.url }}" class="{{classes}} language-link">{{ page.lang }}</a>
-                            </li>
+                                <li>
+                                    <a href="{{ page.url }}" class="{% if current contains page.lang %}is-active{% endif %}">{{ page.lang }}</a>
+                                </li>
                             {% endfor %}
                         </ul>
                     </li>
