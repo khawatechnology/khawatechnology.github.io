@@ -18,19 +18,27 @@ collections:
 
 
 defaults:
-- scope:
-    path: ''
-    type: posts
-  values:
-    permalink: "/articles/:title/"
-    layout: post
-    author:
-- scope:
-    path: ''
-    type: article_tags
-  values:
-    permalink: "/articles/tags/:title/"
-    layout: tag
+  -
+    scope:
+      path: ''
+      type: posts
+    values:
+      permalink: "/articles/:title/"
+      layout: post
+      author:
+  -
+    scope:
+      path: ''
+      type: article_tags
+    values:
+      permalink: "/articles/tags/:title/"
+      layout: tag
+  #TODO: FIXME This is not working
+  -
+    scope:
+      path: "assets/*"
+    values:
+      sitemap: false
 
 
 # Jekyll
@@ -68,9 +76,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-gist
-
-paginate: 2
-paginate_path: "articles/page:num"
 
 jekyll-mentions:
     base_url: https://github.com
