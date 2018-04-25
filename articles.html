@@ -1,0 +1,18 @@
+---
+layout: post
+title: Articles
+sitemap:
+priority: 1.0
+lastmod: 2018-04-04
+changefreq: monthly
+lang: fr
+ref: blog
+---
+<section class="clearfix">
+    {% assign posts=site.posts | where:"lang", page.lang %}
+    {% for post in posts %}
+    <div class="row">
+        {% include post_excerpt.html post=post %}
+    </div>
+    {% endfor %}
+</section>

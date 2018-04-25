@@ -4,4 +4,10 @@
 <p class="lead text-theme">
     {{ site.t[page.lang].contact_us_2 }}
 </p>
-<a href="{{ '/contact' | absolute_url }}" class="text-theme btn btn-primary btn-lg btn-rounded">{{ site.t[page.lang].contact_us }}</a>
+{% if page.lang == 'fr' %}
+  {% assign contact_path = '/contactez-nous' %}
+{% else %}
+    {% assign contact_path = '/contact-us' %}
+{% endif %}
+
+<a href="{{ contact_path | absolute_url }}" class="text-theme btn btn-primary btn-lg btn-rounded">{{ site.t[page.lang].contact_us }}</a>
