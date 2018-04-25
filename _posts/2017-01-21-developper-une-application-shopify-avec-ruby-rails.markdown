@@ -1,33 +1,33 @@
 ---
 layout: post
-title: "Develop a Shopify application with Ruby on Rails"
+title: "Développer une application Shopify avec Ruby on Rails"
 date: 2017-03-21 10:55:40 +0200
 categories: Technical
 tags: [ruby-on-rails, shopify]
-excerpt: In this article, we'll see through a simple example how to develop a Shopify application using Ruby on Rails.
+excerpt: Cet article décrit comment développer une application Shopify avec Ruby on Rails au travers d'un exemple simple.
 image: /images/shopify_logo_black_1.png
-lang: en
+lang: fr
 ref: shopify-app-rails
 ---
 
-In this article, we'll see through a simple example how to develop a Shopify application using Ruby on Rails.
-Our application will retrieve and display the list of orders passed on a shop
-You'll notice that the architecture of a Shopify application is very different from that of a Magento or Prestashop module.
-The code of a Magento module is directly added to the Magento source code and the module has direct access to the Magento database.
-A Shopify application on the other hand is hosted on its own server and accesses Shopify data via its API.
-Hence, the very first step is to configure our Rails application to be able to communicate with the Shopify API.
+Dans cet article, nous allons voir au travers d'un exemple simple comment développer une application Shopify avec Ruby on Rails
+Notre application récupère et affiche la liste des commandes passées sur une boutique.
+Vous remarquerez que l'architecture d'une application Shopify est très différente de cette d'un module Magento ou Prestashop par exemple.
+Le code source du module Magento est directement intégré au code Magento et le module a un accès complet à la base de données de la boutique.
+Une application Shopify est hébergée sur un serveur isolé de la boutique, n'a accès qu'à sa propre base de données et communique avec la boutique via l'API Shopify.
+Ainsi, la première étape est de configurer l'application Ruby on Rails afin qu'elle soit capable de communiquer avec l'API Shopify.
 
-Create a Shopify partner account
+Créez un compte Shopify Parner
 --------------------------------
 
-In order to be able to ask for a Shopify API key, you'll need a Shpoify Partner account.
-Browse to [http://shopify.com/partners](http://shopify.com/partners) and create your account.
-You'll then be able to create a new application in order to get an API key and its corresponding secret.
+Afin d'être en mesure de faire votre demande de clé d'API Shopify, vous devez disposer d'un compte Shopify Partner.
+Rendez-vous à l'adresse [http://shopify.com/partners](http://shopify.com/partners) pour créer votre compte.
+Créez ensuite une nouvelle application afin d'obtenir une clé d'API et le secret correspondant.
 
-Application configuration
+Configuration de l'application
 -------------------------
-We'll be using the very useful [`shopify_app`](https://github.com/Shopify/shopify_app) gem that provides the `SessionsController` class as well as code that allows to authentify our application with the Shopify API via Oauth.
-Add the gem to your `Gemfile` and install your project.
+Nous allons nous servir de la très pratique gem [`shopify_app`](https://github.com/Shopify/shopify_app) qui nous fournit la classe `SessionsController` ainsi que du code permettant d'authentifier notre application à l'API Shopify via Oauth.
+Ajoutez la gem à votre `Gemfile` et installez votre projet.
 
 ```ruby
 ruby '2.3.3'
@@ -62,19 +62,18 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'sidekiq'
 ```
 
-We now need to configure the Rails application so that it can communicates with the Shopify API.
-I recommend you take advantage of the generator provided by the `shopify_app` gem.
-The generator will create various files necessary for your application to work properly with Shopify.
+Il faut maintenant configurer l'application Rails afin soit capable de communiquer correctement avec l'API Shopify.
+Je vous recommande d'utiliser le générateur fourni par la gem `shopify_app` qui va créer pour vous différents fichiers nécessaires au bon fonctionnement de votre application.
 
 ```bash
 rails generate shopify_app --api_key <your_api_key> --secret <your_app_secret>
 ```
 
-Among the files created by the generator, we have:
+Parmi les fichiers crées par le générateur, nous avons :
 
-### An initialization file
+### Un fichier d'initialisation
 
-The `config/initializer/shopify_app.rb` file contains the configuration allowing your application to authenticate with the Shopify API:
+Le fichier `config/initializer/shopify_app.rb` contient la configuration permettant à votre application de s'authentifier à l'API Shopify :
 
 ```ruby
 ShopifyApp.configure do |config|
@@ -91,14 +90,13 @@ ShopifyApp.configure do |config|
 end
 ```
 
-In this example, the application requests a read access to the orders of the shop on which the application is installed.
-We also indicate that the application will be integrated inside the Shopify backend.
-This means our application will be displayed within an iframe integrated inside the Shopify backend, giving the impression that it is part of Shopify.
-Finally, the application requests to be notified when certain events regarding orders occur or when the application is deleted from a shop.
+Dans cette exemple, l'application requiert un accès en lecture aux commandes des boutiques Shopify sur lesquelles l'application est installée.
+Nous indiquons que l'application sera intégrée à l'administration Shopify, c'est à dire qu'elle sera servie dans une iframe à l'intérieur d'une page d'administration Shopify, donnant ainsi l'illusion d'être partie intégrante de Shopify.
+Finalement, l'application demande à être avertie lors de certains événements concernant les commandes ou lorsque l'application est désinstallée d'une boutique.
 
-### The routes configuration file
+### Un fichier de configuration des routes
 
-The `config/routes.rb` file has been updated in order to include the `ShopifyApp` engine routes inside our application:
+Le fichier `config/routes.rb` a été mis à jour afin d'inclure les routes de l'engine `ShopifyApp` :
 
 ```ruby
 Rails.application.routes.draw do
@@ -108,12 +106,13 @@ Rails.application.routes.draw do
 end
 ```
 
-Besides the routes provided by the engine used during the authentication process with the Shopify API, we add a route to the action that will list existing orders from the shop.
+En plus des routes fournies par l'engine utilisées lors du processus d'authentification de votre application avec l'API Shopify, nous ajoutons la route vers l'action qui liste les commandes existantes dans la boutique.
 
-### The Shop model
+### Le modèle Shop
 
-The gem generator creates the `Shop` model as well as the associated migration.
-The shops on which the application is installed are stored in the `shops` table. yor each shop it is installed on, the table also stores the authentication token.
+Le générateur crée le modèle `Shop` ainsi que la migration associée.
+C'est dans la table `shops` que seront enregistrées les boutiques sur lesquelles l'application a été installée.
+Pour chaque boutique, la table enregistre aussi le token permettant de s'authentifier à la boutique.
 
 ```ruby
 class CreateShops < ActiveRecord::Migration
@@ -140,23 +139,22 @@ class Shop < ActiveRecord::Base
 end
 ```
 
-Don't forget to run your migrations after generating the migration file.
+Pensez à jouer vos migrations après avoir généré le modèle et le fichier de migration.
 
-Now that we have turned the Rails application into a Shopify application with the `shopify_app` gem, let's see how we can retrieve the orders list and display it in our application.
+Maintenant que vous avons transformé notre application Rails en application Shopify à l'aide de la gem `shopify_app` et de son générateur, voyons comment nous pouvons récupérer la liste des commandes et les afficher dans notre application.
 
-The controller
+Création du contrôleur
 --------------
 
-The `OrdersController` controller is responsible for retrieving the orders.
-It inherits the `ShopifyApp::AuthenticatedController` controller provided by the `shopify_app` gem.
+Le contrôleur `OrdersController` est en charge de récupérer la liste des commandes. Il hérite du contrôleur `ShopifyApp::AuthenticatedController` fourni par la gem `shopify_app`.
 
-The `get_current_shop` method retrieves the shop the application is currently running on.
-The `synchronize` method that we'll study later on retrieves the orders via the Shopify API and stores them in our Rails application's database.
+La méthode `get_current_shop` récupère la boutique sur laquelle l'application est en train d'être utilisée.
+La méthode `synchronize` que nous allons voir plus loin récupère la liste des commandes via l'API Shopify et les enregistre dans la base de donnée locale à l'application Rails.
 
-The models
-----------
+Création des modèles
+---
 
-Besides the `Shop` model necessary to any Shopify application, we'll create the `Order` model that represents an order:
+En plus du modèle `Shop` nécessaire à toute application Shopify, nous devons créer le modèle `Order` qui représente une commande :
 
 ```ruby
 class CreateOrders < ActiveRecord::Migration
@@ -180,7 +178,7 @@ class Order < ActiveRecord::Base
 end
 ```
 
-Finally, let's look at the `Shop`'s model synchronize method that retrieves the orders via the Shopify API and stores them in the database:
+Finalement, voyons la méthode `synchronize` du modèle `Shop` qui récupère les commandes via l'API Shopify afin de les enregistrer en base de données :
 
 ```ruby
 class Shop < ActiveRecord::Base
@@ -211,12 +209,12 @@ class Shop < ActiveRecord::Base
 end
 ```
 
-The views
+Création des vues
 ---------
 
-We'll now create the views that will list the orders.
+Nous allons maintenant créer les vues permettant d'afficher la liste des commandes.
 
-First, let's have a look at this example layout that takes advantage of the [Embedded App SDK](https://help.shopify.com/api/sdks/shopify-apps/embedded-app-sdk) that allows to integrate your Rails application directly inside the Shopify administration interface:
+Voyons tout d'abord un exemple de layout tirant parti de l'[Embedded App SDK](https://help.shopify.com/api/sdks/shopify-apps/embedded-app-sdk) permettant d'intégrer votre application Rails directement à l'intérieur de l'interface d'administration Shopify :
 
 ```html
 <!DOCTYPE html>
@@ -261,10 +259,10 @@ First, let's have a look at this example layout that takes advantage of the [Emb
 </html>
 ```
 
-The Embedded App SDK allows, among other things, to add buttons, display alerts and modals directly inside the Shopify interface.
-That is why it needs to authenticate using the Shopify API key.
+L'Embedded App SDK permet entre autres choses d'ajouter des boutons ou d'afficher des alertes et des modals directement dans l'interface de Shopify.
+C'est pourquoi le SDK a besoin de s'authentifier à l'aide de la clé d'API Shopify.
 
-Below is the view that lists the orders retrieved by the controller:
+Voyons maintenant la vue listant les commandes récupérées par le contrôleur :
 
 ```html
 <% content_for :javascript do %>
@@ -330,15 +328,15 @@ Below is the view that lists the orders retrieved by the controller:
 </div>
 ```
 
-Notice that the view adds pagination button using the Embedded App SDK.
+Remarquez que la vue ajoute des boutons de pagination via le Embedded App SDK.
 
-Example job
------------
+Création d'un job
+---
 
-Below is an example job that gets called by the Shopify API when an order is created on a shop, as we asked in the `webhooks` instruction in the `shopify_app.rb` initialization file.
-The webhook system allows to keep our Rails application orders in synchronization with the orders in the shops the application is installed on.
-For example, we asked that our application be informed via a webhook whenever a new order is created so that it can create the order in its own database.
-Let's look at the `OrdersCreateJob` class:
+Voyons un exemple de job appelé par l'API Shopify lors d'un événement sur une commande comme demandé via l'instruction `webhooks` dans le fichier d'initialisation `shopify_app.rb`.
+Le système de webhooks permet de garder les commandes de notre application Rails synchronisées avec les commandes de la boutique Shopify.
+Par exemple, notre application demande à être informée lors de la création d'une nouvelle commande afin qu'elle puisse elle-même créer cette commande dans sa base de données.
+Etudions donc la classe `OrdersCreateJob` :
 
 ```ruby
 class OrdersCreateJob < ActiveJob::Base
@@ -360,15 +358,14 @@ class OrdersCreateJob < ActiveJob::Base
 end
 ```
 
-Last recommendation
--------------------
+Dernière recommandation
+---
 
-I highly recommend that you style your Shopify application using the [Shopify Embedded App Frontend Framework](http://seaff.microapps.com/) frontend library.
-This library provides CSS and Javascript code allowing you to use the Shopify user interface elements.
-Your users will be greatly appreciate it as they are already used to this interface.
+Je vous recommande vivement de styler votre application Shopify à l'aide de la librairie frontend [Shopify Embedded App Frontend Framework](http://seaff.microapps.com/).
+Cette librairie fournit le code CSS et Javascript vous permettant de reproduire l'interface utilisateur Shopify, vous faciliterez ainsi grandement la vie de vos utilisateurs qui sont déjà habitués à utiliser cette interface.
 
 Conclusion
 ----------
 
-The example application presented in this article is very limited and doesn't add any value to what you can do in the Shopify administration interface.
-However, you now know everything you need to create an awesome Shopify application with Ruby on Rails.
+L'exemple présenté dans cet article est bien entendu très limité et n'apporte aucune valeur ajoutée par rapport à ce que propose déjà l'interface d'administration Shopify.
+Cependant, vous disposez maintenant de tous les outils vous permettant de créer une application Shopify aussi évoluée que vous le désirez avec Ruby on Rails.

@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Automate your deployment with Capistrano, git and RVM"
-date:   2017-01-20 10:55:40 +0200
+title: "Automate your deployment with Capistrano, git and RVM"
+date: 2017-01-20 10:55:40 +0200
 categories: Technical
 tags: [ruby-on-rails, devops]
 excerpt: This articles describes how to setup Capistrano in order to automate a Ruby on Rails application.
@@ -12,7 +12,6 @@ ref: capistrano-deploy
 
 This articles describes how to setup Capistrano in order to automate a Ruby on Rails 4.2.3 application versioned with git on a server running RVM.
 That way, the Rails project is developed on one or more local machines, versioned in git and deployed in an automated fashion on the remote staging / production servers without the need to connect to the servers.
-
 
 Before getting started, update RVM, ruby and Rails on your local machine:
 

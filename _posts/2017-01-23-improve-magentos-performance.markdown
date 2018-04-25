@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Improve  Magento's performances"
-date:   2017-01-23 10:55:40 +0200
+title: "Improve  Magento's performances"
+date: 2017-01-23 10:55:40 +0200
 categories: Technical
 tags: [magento, performance]
 excerpt: This article describes how to improve Magento's performances by optimizing the core_url_rewrite table.
@@ -22,7 +22,7 @@ Your catalog will be much more pleasant to browse for your customers which in re
 Step 1: Modify the mage_catalog_model_url model
 -----------------------------------------------
 
-Beware, every time you want to make a change in Magento's core functionnalities, don't edit core files but make your changes in a module as described in the official documentation.
+Beware, every time you want to make a change in Magento's core functionnalities, don't edit core files but make your changes in a module as described in the [official documentation](http://devdocs.magento.com/guides/m1x/magefordev/mage-for-dev-1.html).
 This way you will be able to update Magento without loosing the customizations specific to your shop.
 
 In the `getProductRequestPath` method, replace:
