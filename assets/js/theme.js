@@ -87,7 +87,6 @@
         if ($body.length >= 1) {
             $body.css('position', 'relative');
             $body.scrollspy({ target: '#nav' });
-            KhawaTheme.updateIsActive($(this));
         }
 
         // When scroll spy updates.
