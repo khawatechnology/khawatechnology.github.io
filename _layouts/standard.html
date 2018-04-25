@@ -13,7 +13,7 @@
                     <h1 class="heading-page text-center-xs primary-color">
                         {% if page.path contains '_posts' %}
                             Articles
-                        {% else if page.path contains '_article_tags' %}
+                        {% elsif page.path contains '_article_tags' %}
                             Tags
                         {% else %}
                             {{ page.title }}

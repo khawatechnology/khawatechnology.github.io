@@ -1,47 +1,7 @@
 /*
- * Khawatik specific styles to go with Drupal markup
+ * Khawatik specific styles
  *
 */
-/*** Make space for the Drupal toolbar. ***/
-/*body {*/
-  /*margin-top: 60px;*/
-/*}*/
-/*@media (min-width: 768px) {*/
-  /*body {*/
-    /*margin-top: 122px;*/
-  /*}*/
-/*}*/
-/*@media (min-width: 1200px) {*/
-  /*body {*/
-    /*margin-top: 92px;*/
-  /*}*/
-/*}*/
-/*#toolbar-administration #toolbar-bar {*/
-  /*z-index: 9999;*/
-/*}*/
-/*body.toolbar-vertical .wrapper-body #nav {*/
-  /*top: 39px;*/
-/*}*/
-/*body.toolbar-fixed .wrapper-body #nav {*/
-  /*top: 39px!important;*/
-/*}*/
-/*body.toolbar-fixed.toolbar-tray-open.toolbar-horizontal .wrapper-body #nav {*/
-  /*top: 79px!important;*/
-/*}*/
-/*** Merge presentation block with top menu on the homepage. ***/
-/*.wrapper-body.homepage {*/
-  /*margin-top: -60px;*/
-/*}*/
-/*@media (min-width: 768px) {*/
-  /*.wrapper-body.homepage {*/
-    /*margin-top: -122px;*/
-  /*}*/
-/*}*/
-/*@media (min-width: 1200px) {*/
-  /*.wrapper-body.homepage {*/
-    /*margin-top: -92px;*/
-  /*}*/
-/*}*/
 .footer {
   margin-top: 0;
   padding-top: 0;
@@ -169,4 +129,9 @@ noscript > div p {
 /*** Fix for case study carousel on case study pages ***/
 #owl-case-studies article.col-sm-4 {
   width: 100%;
+}
+
+/*** CSS reset to remove borders on buttons ***/
+button {
+  border: none;
 }
