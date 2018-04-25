@@ -5,7 +5,8 @@
 <div class="form-group">
     <div class="row">
         <div class="col-sm-12">
-            {% for post in site.posts limit:3 %}
+            {% assign posts=site.posts | where:"lang", page.lang %}
+            {% for post in posts limit:3 %}
                 <article>
                     <h3 class="title-xs text-theme-zero display-inline-block">
                         <a href="{{ post.url }}"><span>{{ post.title }}</span></a>
