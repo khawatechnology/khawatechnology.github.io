@@ -12,7 +12,7 @@
       fr: L'équipe
     url:
       en: /#section-team
-      en: /accueil#section-team
+      fr: /accueil#section-team
     data-target: '#section-team'
 
   - title:
