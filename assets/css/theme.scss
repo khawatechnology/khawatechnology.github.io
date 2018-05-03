@@ -3675,6 +3675,12 @@ a .fa-round:hover {
 /* Article
    ================================================== */
 
+article.post {
+  h1, h2, h3, h4, h5, h6 {
+    color: $primarycolor;
+  }
+}
+
 .grid-posts .row + .row {
   margin-top: 60px;
 }
