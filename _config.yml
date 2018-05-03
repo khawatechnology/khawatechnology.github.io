@@ -32,7 +32,8 @@ defaults:
     values:
       permalink: "/tags/:title/"
       layout: tag
-  #TODO: FIXME This is not working
+  # Exclude asset is not working
+  # See: https://github.com/jekyll/jekyll-sitemap/issues/180
   -
     scope:
       path: "assets/*"
