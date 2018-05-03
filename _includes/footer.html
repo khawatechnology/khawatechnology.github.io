@@ -67,3 +67,27 @@
         </div>
     </div>
 </footer>
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+    window.addEventListener("load", function(){
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#5c8cc5",
+                    "text": "#ffffff"
+                },
+                "button": {
+                    "background": "#ff8f33",
+                    "text": "#ffffff"
+                }
+            },
+            "theme": "classic",
+            "content": {
+                "message": "\nEn poursuivant votre navigation sur ce site, vous acceptez l’utilisation de cookies pour réaliser des statistiques de visites.",
+                "dismiss": "J'accepte",
+                "link": "En savoir plus",
+                "href": "https://khawa.tech/mentions-legales"
+            }
+        })});
+</script>
