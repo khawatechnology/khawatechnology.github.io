@@ -84,10 +84,12 @@
             },
             "theme": "classic",
             "content": {
-                "message": "\nEn poursuivant votre navigation sur ce site, vous acceptez l’utilisation de cookies pour réaliser des statistiques de visites.",
+                // "message": "\nEn poursuivant votre navigation sur ce site, vous acceptez l’utilisation de cookies pour réaliser des statistiques de visites.",
+                "message": "{{ site.t[page.lang].cookie_consent }}",
                 "dismiss": "J'accepte",
                 "link": "En savoir plus",
-                "href": "https://khawa.tech/mentions-legales"
+                // "href": "https://khawa.tech/mentions-legales"
+                "href": "{{ site.t[page.lang].legal_link }}"
             }
         })});
 </script>

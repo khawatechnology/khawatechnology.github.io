@@ -100,6 +100,8 @@ t:
     footer_nav_legal: Legal notice
     recent_articles: Recent articles
     navbar_language: Language
+    cookie_consent: By continuing navigating on this website, you are giving consent to cookies being used for visit statistics.
+    legal_link: 'https://khawa.tech/legal-notice'
   fr:
     home_header_tagline: Des ingénieurs au service de votre projet web
     home_header_tagline2_1: Nous
@@ -113,3 +115,5 @@ t:
     footer_vat_number: "Numéro TVA : FR08822507166"
     recent_articles: Articles récents
     navbar_language: Langue
+    cookie_consent: En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de cookies pour réaliser des statistiques de visites.
+    legal_link: 'https://khawa.tech/mentions-legales'
