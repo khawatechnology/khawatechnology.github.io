@@ -101,6 +101,8 @@ t:
     recent_articles: Recent articles
     navbar_language: Language
     cookie_consent: By continuing navigating on this website, you are giving consent to cookies being used for visit statistics.
+    cookie_accept: Accept
+    legal_link_title: Customize
     legal_link: '/legal-notice'
   fr:
     home_header_tagline: Des ingénieurs au service de votre projet web
@@ -116,4 +118,6 @@ t:
     recent_articles: Articles récents
     navbar_language: Langue
     cookie_consent: En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de cookies pour réaliser des statistiques de visites.
+    cookie_accept: J'accepte
+    legal_link_title: Personnaliser
     legal_link: '/mentions-legales'
