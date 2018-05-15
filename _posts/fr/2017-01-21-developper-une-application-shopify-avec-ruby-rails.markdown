@@ -6,7 +6,6 @@ categories: Technical
 tags: [ruby-on-rails, shopify]
 excerpt: Cet article décrit comment développer une application Shopify avec Ruby on Rails au travers d'un exemple simple.
 image: /images/shopify_logo_black_1.png
-lang: fr
 ref: shopify-app-rails
 ---
 

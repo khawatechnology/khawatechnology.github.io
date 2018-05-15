@@ -6,7 +6,6 @@ categories: Technical
 tags: [magento, performance]
 excerpt: This article describes how to improve Magento's performances by optimizing the core_url_rewrite table.
 image: /images/database-schema.png
-lang: en
 ref: magento-performance
 ---
 

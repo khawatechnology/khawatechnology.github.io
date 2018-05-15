@@ -48,6 +48,12 @@
                                     <a href="{{ post.url }}" class="{% if current contains post.lang %}is-active{% endif %}">{{ post.lang }}</a>
                                 </li>
                             {% endfor %}
+                            {% assign article_tags=site.article_tags | where:"ref", page.ref | sort: 'lang' %}
+                            {% for tag in article_tags %}
+                            <li>
+                                <a href="{{ tag.url }}" class="{% if current contains tag.lang %}is-active{% endif %}">{{ tag.lang }}</a>
+                            </li>
+                            {% endfor %}
 
                             {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
                             {% for page in pages %}

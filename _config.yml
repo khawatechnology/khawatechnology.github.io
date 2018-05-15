@@ -16,22 +16,39 @@ collections:
     title: Tags
     output: true
 
-
 defaults:
   -
     scope:
-      path: ''
+      path: '_posts/en'
       type: posts
     values:
-      permalink: "/:title/"
+      permalink: "posts/:title/"
       layout: post
+      lang: en
   -
     scope:
-      path: ''
+      path: '_posts/fr'
+      type: posts
+    values:
+      permalink: "articles/:title/"
+      layout: post
+      lang: fr
+  -
+    scope:
+      path: '_article_tags/en'
       type: article_tags
     values:
-      permalink: "/tags/:title/"
+      permalink: "posts/tags/:title/"
       layout: tag
+      lang: en
+  -
+    scope:
+      path: '_article_tags/fr'
+      type: article_tags
+    values:
+      permalink: "articles/tags/:title/"
+      layout: tag
+      lang: fr
   # Exclude asset is not working
   # See: https://github.com/jekyll/jekyll-sitemap/issues/180
   -
@@ -104,6 +121,7 @@ t:
     cookie_accept: Accept
     legal_link_title: Customize
     legal_link: '/legal-notice'
+    post_path: posts
   fr:
     home_header_tagline: Des ingénieurs au service de votre projet web
     home_header_tagline2_1: Nous
@@ -121,3 +139,4 @@ t:
     cookie_accept: J'accepte
     legal_link_title: Personnaliser
     legal_link: '/mentions-legales'
+    post_path: articles

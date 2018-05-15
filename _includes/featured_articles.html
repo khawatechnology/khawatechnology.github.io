@@ -27,7 +27,7 @@
         <div class="text-theme">
             {% for tag in site.tags %}
                 <div>
-                    <a href="/articles/tags/{{ tag | first }}" class="btn btn-xs btn-default">
+                    <a href="/{{site.t[page.lang].post_path}}/tags/{{ tag | first }}" class="btn btn-xs btn-default">
                         <i class="fa fa-tags"></i>{{ tag | first }}
                     </a>
                 </div>

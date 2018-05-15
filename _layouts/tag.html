@@ -3,7 +3,7 @@ layout: post
 ---
 
 {% assign tag = page.slug  %}
-{% assign tag_posts = site.tags[tag] %}
+{% assign tag_posts = site.tags[tag] | where:"lang", page.lang %}
 
 <h3 class="title-md text-theme hr-left primary-color mb">
     {{ page.title }}

@@ -1,19 +1,18 @@
 ---
 layout: post
-title: "Déploiement automatisé avec Capistrano, git et RVM"
+title: "Automate your deployment with Capistrano, git and RVM"
 date: 2017-01-20 10:55:40 +0200
 categories: Technical
 tags: [ruby-on-rails, devops]
-excerpt: Cet article décrit la procédure de mise en place de Capistrano afin d'automatiser le déploiement d'une application Ruby on Rails.
+excerpt: This articles describes how to setup Capistrano in order to automate a Ruby on Rails application.
 image: /images/CapistranoLogo.png
-lang: fr
 ref: capistrano-deploy
 ---
 
-Cet article décrit la procédure de mise en place de Capistrano afin d'automatiser le déploiement d'une application Ruby on Rails 4.2.3 versionnée avec git sur un serveur utilisant RVM.
-Ainsi le projet Rails est développé en local sur une ou plusieurs machine, est versionné avec git et est déployé de manière automatisée sur le serveur de test / production sans avoir besoin de se connecter au serveur.
+This articles describes how to setup Capistrano in order to automate a Ruby on Rails 4.2.3 application versioned with git on a server running RVM.
+That way, the Rails project is developed on one or more local machines, versioned in git and deployed in an automated fashion on the remote staging / production servers without the need to connect to the servers.
 
-Avant de commencer, mettez à jour RVM, ruby ainsi que Rails sur votre machine locale :
+Before getting started, update RVM, ruby and Rails on your local machine:
 
 ```bash
 rvm get stable
@@ -21,28 +20,29 @@ rvm install ruby --latest
 gem install rails
 ```
 
-A l'heure où j'écris cet article, il s'agit de ruby-2.2.1 et Rails 4.2.3
+At the time of writing this article, latest Ruby version is 2.2.1 and latest Rails version is 4.2.3.
 
-Création du projet en local
+Create the local project
 ------------------------
 
-Créez un nouveau projet sur votre machine locale ou alternativement clonez un projet existant depuis github :
+Create a new Rails project on your local machine or clone an existing project from a remote repository:
 
 ```bash
 rails new myapp
 ```
 
-Créez les fichiers `.ruby-version` et `.ruby-gemset` à la racine du projet Rails qui indiquent à RVM avec quelle version de ruby et avec quel gemset vous travaillez :
+Create the `.ruby-version` and `.ruby-gemset` files at your project's root.
+Those files indicate which ruby version and which gemset your are using:
 
 ```bash
 ruby-2.2.1
 myproject
 ```
 
-Création des repository git en local et sur le serveur
+Create the git repository locally and on the remote server
 ----------------------------------------------------------
 
-Créez le repository sur le serveur :
+Create the repository on the remote server:
 
 ```bash
 mkdir myproject
@@ -50,7 +50,7 @@ cd myproject
 git --bare init
 ```
 
-Faites de même sur votre machine locale :
+Do the same on your local machine:
 
 ```bash
 cd myproject
@@ -60,11 +60,11 @@ git remote add origin
 git@example.com:/opt/git/repository.git
 ```
 
-Mise en place de Capistrano
----------------------------
+Setup Capistrano
+----------------
 
-Capistrano s'installe sur votre machine locale à l'aide de bundler.
-Ajoutez les gems suivantes dans votre Gemfile :
+Capistrano is installed on your local machine using Bundler.
+Add the following gems inside your Gemfile:
 
 ```ruby
 group :development do
@@ -75,16 +75,17 @@ group :development do
 end
 ```
 
-Installez les gems :
+Install the gems with:
 
 ```bash
 bundle install
 ```
 
-Afin de configurer Capistrano, exécutez la commande cap install qui va générer les fichiers de configuration Capistrano `config/deploy.rb` et `config/deploy/production.rb`.
-Ceux-ci contiennent les valeurs de configuration de base.
-Parcourez ces fichiers et faites les modifications nécessaires, par exemple renseignez l'url du repository git utilisé pour versionner votre application.
-A titre d'exemple, je partage le contenu de ces fichiers tel qu'utilisés dans un de mes projets :
+In order to configure Capistrano, run the cap install command that will generate the `config/deploy.rb` and `config/deploy/production.rb` Capistrano configuration files.
+Those files will be generated with default configuration values.
+Browse those files and make the appropriate adjustments.
+For example, set the correct url corresponding to the git repository used to version your application.
+As an example, I share the content of those files as I use them in my projects:
 
 ```ruby
 # config valid only for current version of Capistrano
@@ -202,12 +203,13 @@ set :ssh_options, {
 #   }
 ```
 
-Avant de pouvoir déployer votre application, pensez à créer le répertoire qui contiendra les fichiers ainsi que sa base de données telle que définie dans le fichier `config/database.yml` sur le serveur de production.
+Before you can deploy your application, don't forget to create the folder that will hold your files as well as the database defined in the `config/database.yml` file on the remote server.
 
-Vous pouvez alors déployer l'application à l'aide de la commande :
+
+You can now deploy your application with a single command:
 
 ```bash
 bundle exec cap production deploy
 ```
 
-Il ne vous reste plus qu'a configurer votre serveur web (Apache, Nginx) afin de servir l'application.
+Your only remaining task is to configure your web sever (Apache, Nginx) in order to serve your application.
