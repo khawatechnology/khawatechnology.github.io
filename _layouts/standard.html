@@ -15,6 +15,8 @@
                             Articles
                         {% elsif page.path contains '_article_tags' %}
                             Tags
+                        {% elsif page.path contains '_case_studies' %}
+                            {{ site.t[page.lang].case_studies }}
                         {% else %}
                             {{ page.title }}
                         {% endif %}

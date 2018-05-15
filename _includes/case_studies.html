@@ -1,0 +1,38 @@
+<div class="row">
+    <h3 class="title-xl text-theme hr primary-color text-center text-theme-lg text-uppercase">
+        {{ site.t[page.lang].case_studies }}
+    </h3>
+    <!--<ul class="list-unstyled text-center text-theme-lg">-->
+    <!--<li class="filter btn btn-ghost btn-orange active" data-filter="all">Tous</li>-->
+    <!--<li class="filter btn btn-ghost btn-orange" data-filter=".e-commerce">E-commerce</li>-->
+    <!--<li class="filter btn btn-ghost btn-orange" data-filter=".business">Business application</li>-->
+    <!--<li class="filter btn btn-ghost btn-orange" data-filter=".presentation">Presentation</li>-->
+    <!--</ul>-->
+</div>
+<div id="container-mixitup">
+    <div class="row">
+        <div class="form-group">
+            {% assign case_studies=site.case_studies | where:"lang", page.lang %}
+            {% for case in case_studies limit:3 %}
+            <article about="{{ case.url }}"
+                     class="mix e-commerce all case-study teaser clearfix col-sm-4 col-xs-12"
+                     style="display: inline-block;">
+                <a class="img-wrapper" href="{{ case.url }}">
+                    <div class="field--item">
+                        <img src="{{ case.images | first }}"
+                             alt="{{ case.title }}"
+                             typeof="foaf:Image" class="img-responsive"/>
+                    </div>
+                </a>
+                <div class="caption-portfolio text-center">
+                    <h3 class="text-theme title-xs"><span>{{ case.title }}</span>
+                    </h3>
+                    <div class="text-theme">{{ case.subtitle }}</div>
+                </div>
+
+            </article>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>

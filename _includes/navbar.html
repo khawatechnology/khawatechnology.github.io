@@ -54,6 +54,12 @@
                                 <a href="{{ tag.url }}" class="{% if current contains tag.lang %}is-active{% endif %}">{{ tag.lang }}</a>
                             </li>
                             {% endfor %}
+                            {% assign case_studies=site.case_studies | where:"ref", page.ref | sort: 'lang' %}
+                            {% for case in case_studies %}
+                            <li>
+                                <a href="{{ case.url }}" class="{% if current contains case.lang %}is-active{% endif %}">{{ case.lang }}</a>
+                            </li>
+                            {% endfor %}
 
                             {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
                             {% for page in pages %}

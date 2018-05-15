@@ -1,0 +1,41 @@
+---
+layout: standard
+---
+<article class="case-study default clearfix">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="wrapper-slider">
+                <div id="carousel-30" class="carousel slide" data-ride="carousel" data-interval="false">
+                    <ol class="carousel-indicators">
+                        {% for image in page.images %}
+                        <li data-target="#carousel-30" data-slide-to="{{ loop.index0 }}"
+                            {% if loop.first %} class="active"{% endif %}>
+                        </li>
+                        {% endfor %}
+                    </ol>
+                    <div class="carousel-inner">
+                        {% for image in page.images %}
+                        <div class="item{% if loop.first %} active{% endif %}">
+                            <img src="{{ image }}"/>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <a href="#carousel-30" role="button" data-slide="prev">
+                        <i class="fa fa-angle-left fa-2x btn-prev"></i>
+                    </a>
+                    <a href="#carousel-30" role="button" data-slide="next">
+                        <i class="fa fa-angle-right fa-2x btn-next"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="content portfolio-item-description">
+                <h3 class="text-theme title-lg primary-color"><span>{{ page.title }}</span></h3>
+                <div class="field--name-field-subtitle">{{ page.subtitle }}</div>
+                {{ content }}
+            </div>
+        </div>
+    </div>
+</article>
+

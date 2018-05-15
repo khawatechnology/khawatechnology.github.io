@@ -15,6 +15,9 @@ collections:
   article_tags:
     title: Tags
     output: true
+  case_studies:
+    title: Case studies
+    output: true
 
 defaults:
   -
@@ -48,6 +51,22 @@ defaults:
     values:
       permalink: "articles/tags/:title/"
       layout: tag
+      lang: fr
+  -
+    scope:
+      path: '_case_studies/en'
+      type: case_studies
+    values:
+      permalink: "case_studies/:title/"
+      layout: case_study
+      lang: en
+  -
+    scope:
+      path: '_case_studies/fr'
+      type: case_studies
+    values:
+      permalink: "realisations/:title/"
+      layout: case_study
       lang: fr
   # Exclude asset is not working
   # See: https://github.com/jekyll/jekyll-sitemap/issues/180
@@ -122,6 +141,7 @@ t:
     legal_link_title: Customize
     legal_link: '/legal-notice'
     post_path: posts
+    case_studies: Case studies
   fr:
     home_header_tagline: Des ingénieurs au service de votre projet web
     home_header_tagline2_1: Nous
@@ -140,3 +160,4 @@ t:
     legal_link_title: Personnaliser
     legal_link: '/mentions-legales'
     post_path: articles
+    case_studies: Réalisations

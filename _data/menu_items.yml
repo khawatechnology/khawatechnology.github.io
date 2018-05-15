@@ -40,6 +40,14 @@
     data-target: '#section-values'
 
   - title:
+      en: Case studies
+      fr: Réalisation
+    url:
+      en: /#section-case-studies
+      fr: /accueil#section-case-studies
+    data-target: '#section-case-studies'
+
+  - title:
       en: Articles
       fr: Articles
     url:
