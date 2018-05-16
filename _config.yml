@@ -57,7 +57,7 @@ defaults:
       path: '_case_studies/en'
       type: case_studies
     values:
-      permalink: "case_studies/:title/"
+      permalink: "case-studies/:title/"
       layout: case_study
       lang: en
   -

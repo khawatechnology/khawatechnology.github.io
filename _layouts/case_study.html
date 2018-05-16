@@ -15,7 +15,7 @@ layout: standard
                     </ol>
                     <div class="carousel-inner">
                         {% for image in page.images %}
-                        <div class="item{% if loop.first %} active{% endif %}">
+                        <div class="item{% if forloop.first %} active{% endif %}">
                             <img src="{{ image }}"/>
                         </div>
                         {% endfor %}
