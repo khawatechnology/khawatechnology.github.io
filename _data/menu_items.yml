@@ -37,7 +37,7 @@
     url:
       en: /#section-why-khawa
       fr: /accueil#section-why-khawa
-    data-target: '#section-values'
+    data-target: '#section-why-khawa'
 
   - title:
       en: Case studies
