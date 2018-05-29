@@ -112,6 +112,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-gist
+  - jekyll-srcset
 
 jekyll-mentions:
     base_url: https://github.com
