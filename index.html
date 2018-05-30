@@ -31,8 +31,8 @@ ref: home
         <div class="row">
             <div class="col-sm-5 center-image">
                 <div class="img-responsive center-block">
-                    <img src="{{ 'images/logo/Khawa_logo_master_colorful_cropped_300x400.png' | absolute_url }}" alt="Khawa Technology"
-                         typeof="foaf:Image" class="img-responsive" />
+                    {% image_tag src="images/logo/Khawa_logo_master_colorful_cropped_300x400.png" width="300" alt="Khawa Technology"
+                         typeof="foaf:Image" class="img-responsive" %}
                 </div>
             </div>
             <div class="col-sm-6 col-sm-offset-1 text-justify">
@@ -325,20 +325,20 @@ ref: home
                 <p class="lead text-theme text-center">They trust us:</p>
                 <div id="owl-clients" class="owl-carousel owl-theme mt-20">
                     <div>
-                        <img src="{{ 'images/clients/logo_karanta.png' | absolute_url }}"
-                             alt="Karanta logo" title="Karanta" typeof="foaf:Image" class="img-responsive" />
+                        {% image_tag src="images/clients/logo_karanta.png" height="71"
+                             alt="Karanta logo" title="Karanta" typeof="foaf:Image" class="img-responsive" %}
                     </div>
                     <div>
-                        <img src="{{ 'images/clients/logo_whitequest.png' | absolute_url }}"
-                             alt="WhiteQuest logo" title="WhiteQuest" typeof="foaf:Image" class="img-responsive" />
+                        {% image_tag src="images/clients/logo_whitequest.png" height="71"
+                             alt="WhiteQuest logo" title="WhiteQuest" typeof="foaf:Image" class="img-responsive" %}
                     </div>
                     <div>
-                        <img src="{{ 'images/clients/logo_visorando.png' | absolute_url }}"
-                             alt="Visorando logo" title="Visorando" typeof="foaf:Image" class="img-responsive" />
+                        {% image_tag src="images/clients/logo_visorando.png" height="71"
+                             alt="Visorando logo" title="Visorando" typeof="foaf:Image" class="img-responsive" %}
                     </div>
                     <div>
-                        <img src="{{ 'images/clients/logo_hippocrene.png' | absolute_url }}"
-                             alt="Fondation Hippocrène logo" title="Fondation Hippocrène" typeof="foaf:Image" class="img-responsive" />
+                        {% image_tag src="images/clients/logo_hippocrene.png" height="71"
+                             alt="Fondation Hippocrène logo" title="Fondation Hippocrène" typeof="foaf:Image" class="img-responsive" %}
                     </div>
                 </div>
                 <div class="lead text-theme text-center mt-40">
@@ -367,8 +367,7 @@ ref: home
         </div>
         <div class="row">
             <div class="col-sm-5 center-image">
-                <img src="{{ 'images/bg/KhawaKharpo.jpg' | absolute_url }}"
-                     alt="Khawa Karpo" class="img-responsive" />
+                {% image_tag src="images/bg/KhawaKharpo.jpg" width="450" alt="Khawa Karpo" class="img-responsive" %}
             </div>
             <div class="col-sm-6 col-sm-offset-1 text-justify">
                 <div class="lead-section lead text-theme">

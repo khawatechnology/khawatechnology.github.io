@@ -59,9 +59,9 @@
             <div class="row">
                 <div class="col-sm-12 text-center col-footer-bottom">
                     <a id="scroll-top" href="#"><i class="fa fa-angle-up fa-2x"></i></a>
-                    <img itemprop="logo" itemscope itemtype="https://schema.org/ImageObject"
-                         src="{{ 'images/logo/Khawa_logo_white_92x92.png' | absolute_url }}"
-                         alt="{{ site.title }}">
+                    {% image_tag itemprop="logo" width="92" itemscope itemtype="https://schema.org/ImageObject"
+                         src="images/logo/Khawa_logo_white_92x92.png"
+                         alt="{{ site.title }}" %}
                     <p class="copyright">{{ site.title }} - {{ site.tagline }}</p>
                 </div>
             </div>

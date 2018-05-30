@@ -13,9 +13,9 @@
                  style="display: inline-block;">
             <a class="img-wrapper" href="{{ case.url }}">
                 <div class="field--item">
-                    <img src="{{ case.thumbnail }}"
-                         alt="{{ case.title }}"
-                         typeof="foaf:Image" class="img-responsive"/>
+                    {% image_tag src=case.thumbnail width="360"
+                         alt=case.title
+                         typeof="foaf:Image" class="img-responsive" %}
                 </div>
             </a>
             <div class="caption-portfolio text-center">
