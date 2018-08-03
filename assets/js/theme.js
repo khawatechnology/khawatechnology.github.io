@@ -204,7 +204,26 @@
                     }
                 }
             });
-
+        }
+        var $case_studies = $('#section-case-studies');
+        if ($case_studies.length >= 1) {
+            jRes.addFunc({
+                breakpoint: 'desktop',
+                enter: function () {
+                    var $row = $case_studies.find('.row');
+                    var maxHeight = 0;
+                    var $cols = $row.find('article .caption-portfolio');
+                    $cols.each(function () {
+                        var currentHeight = $(this).height();
+                        if (currentHeight > maxHeight) {
+                            maxHeight = currentHeight;
+                        }
+                    });
+                    $cols.each(function () {
+                        $(this).height(maxHeight);
+                    });
+                }
+            });
         }
     });
 })(jQuery);
