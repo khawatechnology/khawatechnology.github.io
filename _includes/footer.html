@@ -68,27 +68,3 @@
         </div>
     </div>
 </footer>
-<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
-<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
-<script>
-    window.addEventListener("load", function(){
-        window.cookieconsent.initialise({
-            "palette": {
-                "popup": {
-                    "background": "#5c8cc5",
-                    "text": "#ffffff"
-                },
-                "button": {
-                    "background": "#ff8f33",
-                    "text": "#ffffff"
-                }
-            },
-            "theme": "classic",
-            "content": {
-                "message": "{{ site.t[page.lang].cookie_consent }}",
-                "dismiss": "{{ site.t[page.lang].cookie_accept }}",
-                "link": "{{ site.t[page.lang].legal_link_title }}",
-                "href": "{{ site.t[page.lang].legal_link }}"
-            }
-        })});
-</script>
