@@ -130,7 +130,7 @@ t:
     home_header_tagline2_3: your
     home_header_tagline2_4: website, e-commerce store, API, Saas product
     contact_us: Contact us
-    contact_us_1: Launching a web project ain't easy. Serious issues are at stake and there are numerous pitfalls.
+    contact_us_1: Launching a new web project ain't that easy. Serious issues are at stake and pitfalls are many.
     contact_us_2: Khawa Technology stands by your side during the whole project's lifecycle in order to ensure its success. Let our expertise drive you and stay focused on your core business.
     footer_share_capital: "Share capital: 10.000€"
     footer_vat_number: "VAT number: FR08822507166"
@@ -138,10 +138,6 @@ t:
     footer_nav_legal: Legal notice
     recent_articles: Recent articles
     navbar_language: Language
-    cookie_consent: By continuing navigating on this website, you are giving consent to cookies being used for visit statistics.
-    cookie_accept: Accept
-    legal_link_title: Customize
-    legal_link: '/legal-notice'
     post_path: posts
     case_studies: Case studies
   fr:
@@ -150,16 +146,12 @@ t:
     home_header_tagline2_2: développons, intégrons avec, auditons
     home_header_tagline2_3: votre
     home_header_tagline2_4: site web, boutique en ligne, API, plateforme Saas
-    contact_us: Contactez-nous
-    contact_us_1: Lancer un projet web n’est pas une mince affaire. Les enjeux sont sérieux et les écueils nombreux.
+    contact_us: Prendre contact
+    contact_us_1: Démarrer un  nouveau projet web n’est pas une mince affaire. Les enjeux sont sérieux et les écueils nombreux.
     contact_us_2: Khawa Technology vous accompagne tout au long de votre projet afin d'en assurer la réussite. Laissez-vous porter par notre expertise et restez concentrés sur votre coeur de métier.
     footer_share_capital: "Capital : 10.000€"
     footer_vat_number: "Numéro TVA : FR08822507166"
     recent_articles: Articles récents
     navbar_language: Langue
-    cookie_consent: En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de cookies pour réaliser des statistiques de visites.
-    cookie_accept: J'accepte
-    legal_link_title: Personnaliser
-    legal_link: '/mentions-legales'
     post_path: articles
     case_studies: Réalisations

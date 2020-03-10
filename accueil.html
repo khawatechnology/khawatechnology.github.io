@@ -15,10 +15,10 @@ ref: home
     <div class="container">
         <div class="row text-center-xs">
             <div class="col-sm-9">
-                <h3 class="title-md">Vous êtes intéressé pour travailler avec nous ?</h3>
+                <h3 class="title-md">Vous souhaitez travailler avec nous ?</h3>
             </div>
             <div class="col-sm-3 text-right text-center-xs">
-                <a href="{{ '/contactez-nous' | absolute_url }}" class="btn btn-primary btn-rounded btn-lg">Contactez-vous</a>
+                <a href="{{ '/contactez-nous' | absolute_url }}" class="btn btn-primary btn-rounded btn-lg">Prendre contact</a>
             </div>
         </div>
     </div>
@@ -37,8 +37,8 @@ ref: home
             </div>
             <div class="col-sm-6 col-sm-offset-1 text-justify">
                 <div class="lead-section lead">
-                    <p>Khawa Technology est une société de développement web basée à Strasbourg spécialisée dans le développement web avec des technologies open source.</p>
-                    <p>Nous sommes disponibles en télé-travail. Nous pouvons intégrer votre équipe de développeurs existante ou prendre le lead technique sur votre projet.</p>
+                    <p>Khawa Technology est une société de service basée à Strasbourg. Nous sommes deux ingénieurs spécialisés dans le développement web avec des technologies open-source.</p>
+                    <p>Nous pouvons intégrer votre équipe de développeurs existante ou prendre le lead technique sur votre projet. Nous sommes disponibles en télé-travail.</p>
                     <p>Nous sommes des passionnés et portons une attention particulière à la qualité de nos livrables. Nous apprécions travailler avec des sociétés qui accordent de l'importance à leur projet web.</p>
                 </div>
             </div>
@@ -53,7 +53,7 @@ ref: home
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3 text-center">
                 <h2 class="block-title title-xl title-section text-uppercase hr primary-color">L'équipe</h2>
-                <p class="text-theme lead lead-section">Nous sommes deux ingénieurs diplômés de l'INSA Lyon cumulant plus de dix années d'expérience dans l'industrie du web.</p>
+                <p class="text-theme lead lead-section">Nous sommes deux ingénieurs diplômés de l'INSA Lyon cumulant plus de quinze années d'expérience dans l'industrie du web.</p>
             </div>
         </div>
         <div class="mb row">
@@ -62,7 +62,7 @@ ref: home
                     <img src="{{ 'images/profile-square.jpg' | absolute_url }}"
                          alt="François Koessler" typeof="foaf:Image" class="img-circle center-block mb-16" />
                     <h3 class="text-theme primary-color mb-16">François Koessler</h3>
-                    <div>Directeur général - Ingénieur</div>
+                    <div>Ingénieur</div>
                     <small>Strasbourg, France</small>
                 </div>
             </div>
@@ -71,7 +71,7 @@ ref: home
                     <img src="{{ 'images/profil-antoine.jpg' | absolute_url }}" alt="Antoine Henry"
                          typeof="foaf:Image" class="img-circle center-block mb-16" />
                     <h3 class="text-theme primary-color mb-16">Antoine Henry</h3>
-                    <div>Directeur technique - Ingénieur</div>
+                    <div>Ingénieur</div>
                     <small>La Rochelle, France</small>
                 </div>
             </div>
@@ -169,10 +169,9 @@ ref: home
                     <h3 class="title-sm text-theme mt-10 primary-color">Frameworks</h3>
                     <ul class="text-theme list-unstyled">
                         <li>Ruby on Rails</li>
-                        <li>React / Redux /webpack</li>
-                        <li>Jekyll</li>
+                        <li>React / Redux / webpack</li>
                         <li>GatsbyJS</li>
-                        <li>JAMstack</li>
+                        <li>Jekyll</li>
                         <li>Projets legacy</li>
                     </ul>
                 </div>
@@ -182,27 +181,24 @@ ref: home
                     <i class="fa fa-3x primary-color fa-e-commerce"></i>
                     <h3 class="title-sm text-theme mt-10 primary-color">E-commerce</h3>
                     <ul class="text-theme list-unstyled">
+                        <li>Spree</li>
                         <li>Solidus</li>
-                        <li>Sharetribe</li>
                         <li>Shopify</li>
-                        <li>Snipcart</li>
-                        <li>Moltin</li>
                     </ul>
                 </div>
             </div>
             <div class="col-sm-3">
                 <div class="icon-box bordered techno-box">
                     <i class="fa fa-3x primary-color fa-devops"></i>
-                    <h3 class="title-sm text-theme mt-10 primary-color">Devops tools</h3>
+                    <h3 class="title-sm text-theme mt-10 primary-color">Outils devops</h3>
                     <ul class="text-theme list-unstyled">
                         <li>Linux</li>
                         <li>Ansible</li>
                         <li>Docker</li>
                         <li>Vagrant</li>
                         <li>OpenStack</li>
-                        <li>Heroku</li>
-                        <li>Rancher</li>
                         <li>Jenkins</li>
+                        <li>Heroku</li>
                     </ul>
                 </div>
             </div>
@@ -233,10 +229,10 @@ ref: home
             <div class="col-sm-5 col-sm-offset-1">
                 <p><strong>Transparence</strong></p>
                 <ul>
-                    <li>Des devis clairs et détaillés listant les tâches à réaliser et le temps estimé</li>
                     <li>Un accès au dépôt git pour suivre les évolutions du code</li>
+                    <li>Un accès à notre logiciel de gestion de projet pour suivre l'évolution des tâches en temps réel</li>
                     <li>Disponibilité par mail, chat ou téléphone</li>
-                    <li>Des rapports décrivant les tâches réalisées</li>
+                    <li>Des rapports décrivant les tâches réalisées et le temps consommé</li>
                 </ul>
             </div>
         </div>
@@ -342,6 +338,10 @@ ref: home
                 <p class="lead text-theme text-center">Ils nous font confiance :</p>
                 <div id="owl-clients" class="owl-carousel owl-theme mt-20">
                     <div>
+                        <img src="{{ 'images/clients/logo_ordumonde.png' | absolute_url }}"
+                             alt="ORDUMONDE logo" title="OR DU MONDE" typeof="foaf:Image" class="img-responsive" />
+                    </div>
+                    <div>
                         <img src="{{ 'images/clients/logo_directmarket.png' | absolute_url }}"
                              alt="Direct Market logo" title="Direct Market" typeof="foaf:Image" class="img-responsive" />
                     </div>
@@ -361,9 +361,6 @@ ref: home
                         <img src="{{ 'images/clients/logo_karanta.png' | absolute_url }}"
                              alt="Karanta logo" title="Karanta" typeof="foaf:Image" class="img-responsive" />
                     </div>
-                </div>
-                <div class="lead text-theme text-center mt-40">
-                    <p>Vous aussi, soyez un de nos clients satisfaits.</p>
                 </div>
             </div>
         </div>
@@ -392,7 +389,7 @@ ref: home
             </div>
             <div class="col-sm-6 col-sm-offset-1 text-justify">
                 <div class="lead-section lead text-theme">
-                    <p>Antoine et François sont deux amis de longue date partis vivre en Asie une fois leur diplôme obtenu. Basés principalement à Pékin, ils ont travaillé dans l'industrie du web pendant plus de huit années.</p>
+                    <p>Antoine et François sont deux amis de longue date partis vivre en Asie suite à l'obtention de leur diplôme. Basés principalement à Pékin, ils ont travaillé dans l'industrie du web pendant plus de dix années.</p>
                     <p>Ayant évolués dans un environnement multiculturel, en startup, agence web et en tant qu'indépendants, ils ont acquis une expérience solide dans la livraison de projets de tailles variées et le leadership technique.</p>
                     <p>Khawa Karpo est le nom de la montagne où Antoine et François ont pris la décision de joindre leurs efforts pour créer la société de développement web Khawa Technology.</p>
                 </div>
